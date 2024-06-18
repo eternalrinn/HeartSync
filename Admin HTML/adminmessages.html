@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartSync/Messages/</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../Assets/logo.png">
+</head>
+<body>
+    <main class="message-main">
+        <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+        <div class="navbar">
+            <nav class="bottomnav">
+                <div class="navigations bottom-navigations">
+                    <a href="admin.html"><i class="fa-solid fa-house"></i></a>
+                    <a href="adminfindmatch.html"><i class="fa-solid fa-heart"></i></a>
+                    <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i></a>
+                    <a href="adminmessages.html" class="active-bnav"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
+                    <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
+                    <a href="adminprofile.html">
+                            <div class="nav-profile">
+                                <img src="../Assets/profile.jpg">
+                            </div>
+                        </a>
+                </div>
+            </nav>
+        
+            </nav>
+        </div>
+<!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+        <div class="sidebar">
+            <nav class="sidenav">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="../Assets/logo.png">
+                        <h1>Heart<span>Sync</span></h1>
+                    </div>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                
+                <a href="profile.html">
+                    <div class="profile">
+                        <img src="../Assets/profile.jpg">
+                        <div class="names">
+                            <h4>Gehlee Dangca</h4>
+                            <p>@Gehl</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="navigations">
+                    <a href="adminpanel.html"><i class="fa-solid fa-screwdriver-wrench"></i><p>Admin</p></a>
+                    <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
+                    <a href="adminfindmatch.html"><i class="fa-solid fa-heart"></i><p>Find Match</p></a>
+                    <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i><p>Videos</p></a>
+                    <a href="adminmessages.html"  class="active-nav"><i class="fa-solid fa-comment-dots"></i><div class="alert"><h5>7</h5></div>  <p>Messages</p></a>
+                    <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div>  <p>Notifications</p></a>
+                </div>
+            </nav>
+            
+            <div class="menu">
+                <a href="#"><i class="fa-solid fa-bars"></i><p>Menu</p></a>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="chat-sidebar">
+
+                <div class="chat-search-container">
+
+                    <div class="inbox-container">
+                        <h1>Inbox</h1>
+                        <div class="inbox-alert">7</div>
+                    </div>
+
+                    <div class="chat-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search your friends or find public groups">
+                    </div>
+                </div>
+
+                <div class="chats-selector">
+                    <div class="messages" onclick="showMessage()">
+                      <i class="fa-solid fa-comment-dots"></i>
+                        <p>Messages</p>
+                    </div>
+                        <div class="messages" onclick="showGlobal()">
+                       <i class="fa-solid fa-globe"></i>
+                        <p>GChat</p>
+                    </div>
+                    <div class="messages">
+                     <i class="fa-solid fa-box-archive"></i>
+                        <p>Archived</p>
+                    </div>
+                    <div class="messages">
+                       <i class="fa-regular fa-comment"></i>
+                        <p>Requests</p>
+                    </div>
+                </div>
+<!-------------------------------- PERSONAL MESSAGES ------------------------------------>
+                <div class="personal-messages" id="personal-messages">
+                    <div class="chat" onclick="showChat()">
+                        <div class="chat-img">
+                            <div class="chat-img-container">
+                                <img src="../Assets/stories/icon1.png">
+                                <h5>Gehlee Cutie<div class="chat-status"></div></h5>
+                            </div>
+                            <div>
+                                <p class="last-chat">23 sec ago</p>
+                            </div>
+                        </div>
+                        <div class="sidechat-container">
+                            <p class="side-chat">Antagal magreply, siguro may iba ng kaduo to😠😠😠</p>
+                            <div class="chatof-status"><p>1</p></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-img">
+                            <div class="chat-img-container">
+                                <img src="../Assets/stories/icon2.png">
+                                <h5>Cutie Gehlee<div class="chat-status"></div></h5>
+                            </div>
+                            <div>
+                                <p class="last-chat">5 min ago</p>
+                            </div>
+                        </div>
+                        <div class="sidechat-container">
+                            <p class="side-chat">D2 na me, where n u?</p>
+                            <div class="chatof-status"><p>1</p></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-img">
+                            <div class="chat-img-container">
+                                <img src="../Assets/stories/icon3.png">
+                                <h5>Gehlee Odon<div class="chat-status"></div></h5>
+                            </div>
+                            <div>
+                                <p class="last-chat">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="sidechat-container">
+                            <p class="side-chat">Goodmorning, kumain ka na ba baby???</p>
+                            <div class="chatof-status"><p>3</p></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-img">
+                            <div class="chat-img-container">
+                                <img src="../Assets/stories/icon4.png">
+                                <h5>DefoNot Bad<div class="chat-status"></div></h5>
+                            </div>
+                            <div>
+                                <p class="last-chat">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="sidechat-container">
+                            <p class="side-chat">Maya nalang, marami pang mga parak dito</p>
+                            <div class="chatof-status"><p>2</p></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-img">
+                            <div class="chat-img-container">
+                                <img src="../Assets/stories/icon5.png">
+                                <h5>Gehlee Gimena<div class="chat-status"></div></h5>
+                            </div>
+                            <div>
+                                <p class="last-chat">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="sidechat-container">
+                            <p class="side-chat">Hello, bumibili ka po ng takoyaki??</p>
+                            <div class="chatof-status"><p>1</p></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-img">
+                            <div class="chat-img-container">
+                                <img src="../Assets/stories/icon6.png">
+                                <h5>Gimena Gehl<div class="chat-status"></div></h5>
+                            </div>
+                            <div>
+                                <p class="last-chat">3 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="sidechat-container">
+                            <p class="side-chat">Nasan ka ngayon par?</p>
+                            <div class="chatof-status"><p>1</p></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-img">
+                            <div class="chat-img-container">
+                                <img src="../Assets/stories/icon2.png">
+                                <h5>Gimena Dangca<div class="chat-status"></div></h5>
+                            </div>
+                            <div>
+                                <p class="last-chat">1 day ago</p>
+                            </div>
+                        </div>
+                        <div class="sidechat-container">
+                            <p class="side-chat">Kumain ka na bby??</p>
+                            <div class="chatof-status"><p>1</p></div>
+                        </div>
+
+                    </div>
+
+                </div>
+<!-------------------------------- PERSONAL MESSAGES ------------------------------------>
+
+<!-------------------------------- GLOBAL MESSAGES ------------------------------------>
+<div class="global-messages" id="global-messages">
+    <!-- CREATE GROUP -->
+    <div class="chat" onclick="showCreateChat()">
+            <div class="chat-img-container">
+                <img src="../Assets/create.png">
+                <h5>CREATE GLOBAL CHAT</h5>
+            </div>
+        <div class="sidechat-container">
+            <p class="side-chat">Engage other people online.</p>
+        </div>
+    </div>
+        <!-- CREATE GROUP -->
+    <div class="chat" onclick="showGChat()">
+        <div class="chat-img">
+            <div class="chat-img-container">
+                <img src="../Assets/groups/group1.jpg">
+                <h5>EVERAFTERS ONLY!! <span>13+ </span></h5>
+            </div>
+            <div class="capacity">
+                <i class="fa-solid fa-microphone"></i>
+                <p class="last-chat global-capacity">16/20</p>
+            </div>
+        </div>
+        <div class="sidechat-container">
+            <p class="side-chat">Looking for evies? join us!</p>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-img">
+            <div class="chat-img-container">
+                <img src="../Assets/groups/group2.jpg">
+                <h5>HANAPAN NG JOWA <span>13+</span></h5>
+            </div>
+            <div class="capacity">
+                <i class="fa-solid fa-microphone"></i>
+                <p class="last-chat global-capacity">5/10</p>
+            </div>
+        </div>
+        <div class="sidechat-container">
+            <p class="side-chat">Malay mo, andito na pala si da wan</p>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-img">
+            <div class="chat-img-container">
+                <img src="../Assets/groups/group3.jpg">
+                <h5>ALLABOUT GEHLEE <span>13+</span></h5>
+            </div>
+            <div class="capacity">
+                <p class="last-chat global-capacity">23/25</p>
+            </div>
+        </div>
+        <div class="sidechat-container">
+            <p class="side-chat">Gehlee ONLY!</p>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-img">
+            <div class="chat-img-container">
+                <img src="../Assets/groups/group4.jpg">
+                <h5>DEFINITELY NOT DARK<span>18+</span></h5>
+            </div>
+            <div class="capacity">
+                <p class="last-chat global-capacity">8/9</p>
+            </div>
+        </div>
+        <div class="sidechat-container">
+            <p class="side-chat">POV: You developed dark humor instead of talking to bitches</p>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-img">
+            <div class="chat-img-container">
+                <img src="../Assets/groups/group5.jpg">
+                <h5>WANTED: JOWA <span>18+</span></h5>
+            </div>
+            <div class="capacity">
+                <i class="fa-solid fa-microphone"></i>
+                <p class="last-chat global-capacity">18/25</p>
+            </div>
+        </div>
+        <div class="sidechat-container">
+            <p class="side-chat">LF Jowa? Sali ka na, baka dito kayo magtagpo!</p>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-img">
+            <div class="chat-img-container">
+                <img src="../Assets/groups/group1.jpg">
+                <h5>18+ ONLY, BAWAL ATABS <span>18+</span></h5>
+            </div>
+            <div class="capacity">
+                <i class="fa-solid fa-microphone"></i>
+                <p class="last-chat global-capacity">17/25</p>
+            </div>
+        </div>
+        <div class="sidechat-container">
+            <p class="side-chat">16+ Above pala exemption, hehe</p>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="chat-img">
+            <div class="chat-img-container">
+                <img src="../Assets/groups/group2.jpg">
+                <h5>RANDOM THOUGHTS <span>13+</span></h5>
+            </div>
+            <div class="capacity">
+                <p class="last-chat global-capacity">15/25</p>
+            </div>
+        </div>
+        <div class="sidechat-container">
+            <p class="side-chat">Just share your random thoughts for good vibes</p>
+        </div>
+
+    </div>
+
+</div>
+
+            <!-------------------------------- GLOBAL MESSAGES ------------------------------------>
+            </div>
+
+
+            <!-------------------------------- MESSAGES CONTENT ------------------------------------>
+            <div class="chat-content" id="chat-content">
+                <div class="chat-head">
+                    <div class="chathead-img">
+                        <div class="divider">
+                            <img src="../Assets/stories/icon1.png">
+                            <div class="chathead-name">
+                                <h5>Gehlee Cutie</h5>
+                                <div class="chathead-status">
+                                    <div class="chat-status"></div>
+                                    <p>Active now </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chathead-buttons">
+                            <div>
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                            <div onclick="showChat()">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chatbox-container">
+                    <div class="chatbox">
+                        <img src="../Assets/stories/icon1.png">
+                        <div class="chatbox-msg">
+                            <p>Goodnight bby 🤍🤍🤍</p>
+                            <h5>11:53 PM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox">
+                        <div class="chatbox-msg">
+                            <p>Goodnight rin 🤍🤍🤍</p>
+                            <h5>11:54 PM</h5>
+                        </div>
+                        <img src="../Assets/profile.jpg">
+                    </div>
+                    <div class="chatbox">
+                        <img src="../Assets/stories/icon1.png">
+                        <div class="chatbox-msg">
+                            <p>Gawa mo ngayon baby?</p>
+                            <h5>9:05 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox">
+                        <div class="chatbox-msg">
+                            <p>Nagvavalorant lang, patapos na rin baby</p>
+                            <h5>9:07 AM</h5>
+                        </div>
+                        <img src="../Assets/profile.jpg">
+                    </div>
+                    <div class="chatbox">
+                        <img src="../Assets/stories/icon1.png">
+                        <div class="chatbox-msg">
+                            <p>Hindi ka na nag-aaya ngayon ah 😠😠😠</p>
+                            <h5>9:08 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox">
+                        <div class="chatbox-msg">
+                            <p>Ay sige sige, sali ka next game</p>
+                            <h5>9:11 AM</h5>
+                        </div>
+                        <img src="../Assets/profile.jpg">
+                    </div>
+                    <div class="chatbox">
+                        <img src="../Assets/stories/icon1.png">
+                        <div class="chatbox-msg">
+                            <p>Bilisan mo na yan</p>
+                            <h5>9:08 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox"></div>
+                    <div class="chatbox">
+                        <img src="../Assets/stories/icon1.png">
+                        <div class="chatbox-msg">
+                            <p>Ano baby? tapos na ba?</p>
+                            <h5>9:25 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox"></div>
+                    <div class="chatbox">
+                        <img src="../Assets/stories/icon1.png">
+                        <div class="chatbox-msg">
+                            <p>Antagal mag reply, siguro may iba ng kaduo to😠😠😠</p>
+                            <h5>9:26 AM</h5>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="chat-type">
+                    <div class="type-buttons">
+                        <i class="fa-solid fa-microphone"></i>
+                        <i class="fa-solid fa-file-image"></i>
+                        <i class='bx bxs-file-gif'></i>
+                    </div>
+                    <div class="typeinput-container">
+                        <input type="text" placeholder="Type your message">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <div class="type-buttons">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------- MESSAGES CONTENT ------------------------------------>
+
+            <!-------------------------------- GLOBAL CONTENT ------------------------------------>
+            <div class="global-content" id="global-content">
+                <div class="chat-head">
+                    <div class="chathead-img">
+                        <div class="chathead-top">
+                            <div class="divider">
+                                <img src="../Assets/groups/group1.jpg">
+                                <div class="chathead-name">
+                                    <h5>EVERAFTERS ONLY!!</h5>
+                                    <div class="chathead-status">
+                                        <p>16/20 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chathead-buttons">
+                                <div>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                                <div onclick="showGChat()">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chathead-bottom">
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group1.jpg">
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group2.jpg">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group3.jpg">
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group4.jpg">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group5.jpg">
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group1.jpg">
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group2.jpg">
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group3.jpg">
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group4.jpg">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                            <div class="otherusers-container">
+                                <img src="../Assets/groups/group5.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chatbox-container">
+                    <div class="chatbox">
+                        <img src="../Assets/groups/group1.jpg">
+                        <div class="chatbox-msg">
+                            <p>Sino bias nyo sa UNIS??</p>
+                            <h5>10:05 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox">
+                        <div class="chatbox-msg">
+                            <p>Gehlee, matic!!!</p>
+                            <h5>10:06 AM</h5>
+                        </div>
+                        <img src="../Assets/groups/group2.jpg">
+                    </div>
+                    <div class="chatbox">
+                        <img src="../Assets/groups/group3.jpg">
+                        <div class="chatbox-msg">
+                            <p>Elisia maloves po!</p>
+                            <h5>10:06 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox">
+                        <div class="chatbox-msg">
+                            <p>Aken lng si Seowon, ahhaha</p>
+                            <h5>10:06 AM</h5>
+                        </div>
+                        <img src="../Assets/groups/group4.jpg">
+                    </div>
+                    <div class="chatbox">
+                        <img src="../Assets/groups/group5.jpg">
+                        <div class="chatbox-msg">
+                            <p>Akin lang si Gehlee 😠😠😠</p>
+                            <h5>10:07 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox">
+                        <div class="chatbox-msg">
+                            <p>Mine Nana cutie</p>
+                            <h5>10:07 AM</h5>
+                        </div>
+                        <img src="../Assets/groups/group1.jpg">
+                    </div>
+                    <div class="chatbox">
+                        <img src="../Assets/groups/group2.jpg">
+                        <div class="chatbox-msg">
+                            <p>Sino po may set na mini-album?</p>
+                            <h5>10:08 AM</h5>
+                        </div>
+                    </div>
+                    <div class="chatbox">
+                        <div class="chatbox-msg">
+                            <p>Ako po, 2 copy meron</p>
+                            <h5>10:09 AM</h5>
+                        </div>
+                        <img src="../Assets/groups/group3.jpg">
+                    </div>
+                    <div class="chatbox">
+                        <img src="../Assets/groups/group4.jpg">
+                        <div class="chatbox-msg">
+                            <p>Mine nalang ung isa, hm?</p>
+                            <h5>10:09 AM</h5>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="chat-type">
+                    <div class="micbut">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <div class="chattypeinput-divider">
+                        <div class="type-buttons">
+                            <i class="fa-solid fa-file-image"></i>
+                        </div>
+                        <div class="typeinput-container">
+                            <input type="text" placeholder="Type your message">
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <div class="type-buttons">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------- GLOBAL CONTENT ------------------------------------>
+
+
+               <!-------------------------------- CREATE CHAT CONTENT ------------------------------------>
+               <div class="create-content" id="create-content">
+                <div class="chat-head">
+                    <div class="chathead-img">
+                        <div class="chathead-top">
+                            <div class="divider">
+                                <img src="../Assets/create.png">
+                                <div class="chathead-name">
+                                    <input type="text" placeholder="Enter Name">
+                                    <div class="chathead-status">
+                                        <p>Enable mic </p>
+                                        <p>Capacity: <input type="number" max="25" min="5" value="5"></p>
+                                        <p>Age: <input type="number" min="7" value="7"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chathead-buttons">
+                            </div>
+                        </div>
+                        <div class="chathead-bottom">
+                            <div class="otherusers-container">
+                                <img src="../Assets/play.png">
+                                <p>Start</p>
+                            </div>
+                            <div onclick="showCreateChat()" class="otherusers-container">
+                                <img src="../Assets/x.png">
+                                <p>Close</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-------------------------------- CREATE CHAT CONTENT ------------------------------------>
+
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/ee2f1420c9.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

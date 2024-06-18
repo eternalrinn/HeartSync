@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartSync/Login</title>
+    <link rel="icon" href="Assets/logo.png">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="" class="login-form" id="login-form">
+            <div class="left">
+                <div class="form-title">
+                    <h1>Welcome back!</h1>
+                    <p>We're happy to see you again!</p>
+                </div>
+                <div class="form-inputs">
+                    <div class="username">
+                        <h1>USERNAME OR EMAIL ADDRESS</h1>
+                        <div class="input-container">
+                            <input type="text" id="userBox">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="password">
+                        <h1>PASSWORD</h1>
+                        <div class="input-container">
+                            <input type="password" id="passBox">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <a href="">Forgot your password?</a>
+                    <button onclick="Login()">Log In</button>
+                    <p>Don't have an account? <a href="" id="createAccountLink">Create Account</a></p>
+                </div>
+            </div>
+            <div class="right">
+                <h1>HEART<span>SYNC</span></h1>
+                <img src="Assets/logo.png">
+            </div>
+        </form>
+
+
+
+        <form action="" class="signup-form" id="sign-up">
+        <div class="left">
+            <div class="form-title">
+                <h1>Welcome to HeartSync!</h1>
+                <p>We're happy to meet you!</p>
+            </div>
+            <div class="form-inputs">
+                <div class="firstname">
+                    <h1>FIRST NAME</h1>
+                    <div class="input-container">
+                        <input type="text" id="firstname">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="middlename">
+                    <h1>MIDDLE NAME</h1>
+                    <div class="input-container">
+                        <input type="text" id="middlename">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="lastname">
+                    <h1>LAST NAME</h1>
+                    <div class="input-container">
+                        <input type="text" id="lastname">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="username">
+                    <h1>USERNAME OR EMAIL ADDRESS</h1>
+                    <div class="input-container">
+                        <input type="text" id="usersign">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="password">
+                    <h1>PASSWORD</h1>
+                    <div class="input-container">
+                        <input type="password" id="signPass1">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                </div>
+                <div class="password">
+                    <h1>CONFIRM PASSWORD</h1>
+                    <div class="input-container">
+                        <input type="password" id="signPass2">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-buttons">
+                <button>Sign In</button>
+                <p>Already have an account? <a href="" id="loginLink">Login</a></p>
+            </div>
+        </div>
+    </form>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/ee2f1420c9.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

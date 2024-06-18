@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bowlby+One&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+    --black: #000000;
+    --gray: #eeeeee;
+    --medgray: #979797;
+    --darkgray: #747474;
+    --lightblue: #f7f6ff;
+    --red: #fd2727;
+    --green: #10eb3f;
+    --white: #ffffff;
+    --palepink: #fff5f6;
+    --pink: #f14b61;
+    --border-pink: #bb8383;
+    --bradius: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    background: url(Assets/background.png);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+nav h1{
+    color: var(--white);
+}
+nav span{
+    color: var(--pink);
+}
+nav img{
+    width: 30px;
+}
+nav .buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+nav .buttons button{
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    padding: 8px 14px;
+}
+.panels{
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    margin: 150px 0 250px 0;
+}
+.panel{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 1200px;
+    height: 500px;
+    padding: 10px;
+    backdrop-filter: blur(50px);
+    border-radius: var(--bradius);
+    background: linear-gradient(to bottom right, rgba(175, 51, 72, 0.5), rgb(255, 192, 203, 0.1));
+    border: 2px solid var(--border-pink);
+}
+.heart3d{
+    position: absolute;
+    width: 200px;
+    right: -20px;
+    top: -100px;
+    transform: rotate(30deg);
+}
+.crown{
+    position: absolute;
+    width: 200px;
+    left: -80px;
+    top: -100px;
+}
+.panel:nth-child(even){
+    grid-template-columns: 55% 45%;
+    background: linear-gradient(to bottom left, rgba(175, 51, 72, 0.5), rgb(255, 192, 203, 0.1));
+}
+.right, .left, .right-even, .left-even{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+}
+.right h1, .left-even h1{
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    color: var(--white);
+}
+.right p , .left-even p{
+    color: var(--white);
+    font-size: 20px;
+}
+.left, .right-even{
+    width: 100vw;
+    height: 99%;
+}
+.left img , .right-even img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.banner{
+    background: linear-gradient(to bottom, var(--pink), rgb(255, 100, 126));
+    overflow-x: hidden;
+}
+.banner-content{
+    padding: 25px;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    left: 100%;
+    animation: bannerSliding 15s linear infinite;
+}
+
+@keyframes bannerSliding {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.banner h1{
+    font-weight: 500;
+    font-family: "Black Han Sans", sans-serif;
+    font-size: 70px;
+    color: var(--white);
+}
+.banner i{
+    color: var(--white);
+    font-size: 25px;
+}
+
+.stopper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 300px;
+}
+.stopper h1{
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--white);
+}
+
+.stopper button{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 300px;
+    justify-content: center;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: var(--white);
+    background-color: var(--pink);
+    font-weight: 600;
+    border-radius: var(--bradius);
+}
+.stopper button i{
+    font-size: 1.5rem;
+}
+
+.login-form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 40px;
+    width: 500px;
+    border-radius: var(--bradius);
+}
+.form-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-inputs h1{
+    font-weight: 600;
+    font-size: 13px;
+}
+.form-inputs input{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.input-container{
+    display: flex;
+    padding: 10px 0 0 0;
+    gap: 1rem;
+    border-bottom: 2px solid var(--pink);
+}
+.input-container i{
+    color: var(--pink);
+}
+.form-buttons{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.form-buttons p{
+    font-size: 15px;
+}
+.form-buttons a{
+    color: var(--pink);
+    font-size: 15px;
+}
+.form-buttons button{
+    border: none;
+    border-radius: var(--bradius);
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 8px 14px;
+}
+.form-title h1{
+    font-size: 1.5rem;
+}
+.form-title p{
+    font-size: 13px;
+}
+@media (max-width: 1275px){
+    .panel{
+        width: 900px;
+    }
+}
+@media (max-width: 430px){
+    nav{
+        gap: 1rem;
+    }
+    nav h1{
+        font-size: 18px;
+    }
+    nav .logo{
+        gap: 0.5rem;
+    }
+    nav .buttons button{
+        width: 80px;
+    }
+    nav img{
+        width: 20px;
+    }
+    nav .buttons button{
+        padding: 5px 10px;
+    }
+    .panels{
+        gap: 10rem;
+    }
+    .panel{
+        width: 400px;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .panel h1{
+        font-size: 30px;
+    }
+    .panel p{
+        font-size: 1rem;
+    }
+    .left, .right-even{
+        display: none;
+    }
+    .heart3d{
+        width: 150px;
+        right: 0;
+    }
+    .crown{
+        width: 150px;
+        left: -20px;
+        transform: rotate(20deg);
+    }
+    .banner h1{
+        font-size: 40px;
+    }
+    .banner i{
+        font-size: 20px;
+    }
+    .stopper h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 375px){
+    .panel{
+        width: 350px;
+    }
+    nav .buttons{
+        gap: 10px;
+    }
+}
