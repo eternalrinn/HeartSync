@@ -2139,20 +2139,12 @@ body{
 .match-right{
     width: 100vw;
 }
-.match-buttons{
-    margin-bottom: 100px
-}
-.caller-container img{
-    width: 100vw;
-}
 .caller-profile img{
     width: 40px;
     border-radius: 50%;
     border: 2px solid var(--pink);
 }
-.match-container{
-    height: 100vh;
-}
+
 .match-left{
     display: none;
 }
