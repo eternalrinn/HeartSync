@@ -2167,6 +2167,9 @@ body{
     flex-direction: column;
     gap: 0.5rem;
 }
+.match-buttons{
+    margin-bottom: 100px;
+}
 .match-buttons i{
 font-size: 50px;
 }
