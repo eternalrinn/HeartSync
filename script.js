@@ -498,56 +498,155 @@ let showRevertPrompt = function(){
 
 // Function to enable dark mode
 function enableDarkMode() {
-    var linkElements = document.querySelectorAll('link#themes[rel="stylesheet"]');
-    
-    linkElements.forEach(function(link) {
-        link.href = '../darkmodecss.css'; // Set the new href value for dark mode
-    });
+    updateStylesheet('themes', '../darkmodecss.css');
+    updateStylesheet('purpMode', ''); // Deactivate purpMode stylesheet
+    localStorage.setItem('mode', 'dark'); // Store dark mode state in local storage
 
-    // Store the dark mode state in local storage
-    localStorage.setItem('mode', 'dark');
+    updatePlayforDefault();
+    updateLogoforDefault();
 }
 
 // Function to enable default mode
 function enableDefaultMode() {
-    var linkElements = document.querySelectorAll('link#themes[rel="stylesheet"]');
-    
-    linkElements.forEach(function(link) {
-        link.href = '../style.css'; // Set the new href value for default mode
-    });
+    updateStylesheet('themes', '../style.css');
+    updateStylesheet('purpMode', ''); // Deactivate purpMode stylesheet
+    localStorage.setItem('mode', 'default'); // Store default mode state in local storage
 
-    // Store the default mode state in local storage
-    localStorage.setItem('mode', 'default');
+    updatePlayforDefault();
+    updateLogoforDefault();
+}
+
+// Function to enable Weverse mode
+function enableWeverseMode() {
+    updateStylesheet('themes', '../weverse.css');
+    updateStylesheet('purpMode', ''); // Deactivate purpMode stylesheet
+    localStorage.setItem('mode', 'weverse'); // Store Weverse mode state in local storage
+
+    // Update logo image and play button when in Weverse mode
+    updateLogoForWeverse();
+    updatePlayButtonForWeverse();
+}
+
+// Function to enable purp mode
+function enablePurpMode() {
+    updateStylesheet('themes', '../gradientpurp.css'); // Deactivate themes stylesheet
+    updateStylesheet('purpMode', ''); // Activate purpMode stylesheet
+    localStorage.setItem('mode', 'purp'); // Store purp mode state in local storage
+
+    updatePlayforPurp();
+    updateLogoforPurp();
+    updateCreatePurp()
+}
+
+// Function to update logo image for Weverse mode
+function updateLogoForWeverse() {
+    var logoImage = document.querySelector('.logo img');
+    if (logoImage) {
+        logoImage.src = '../Assets/logo-weverse.png';
+    }
+}
+
+// Function to update play button image for Weverse mode
+function updatePlayButtonForWeverse() {
+    var playButton = document.querySelector('.match-start img');
+    if (playButton) {
+        playButton.src = '../Assets/play-blue.png';
+    }
+    var logoImage = document.querySelector('.global-play img');
+    if (logoImage) {
+        logoImage.src = '../Assets/play-blue.png';
+    }
+    var logoImage = document.querySelector('.global-x img');
+    if (logoImage) {
+        logoImage.src = '../Assets/x-blue.png';
+    }
+    var logoImage = document.querySelector('.global-messages .chat .chat-img-container img');
+    if (logoImage) {
+        logoImage.src = '../Assets/create-blue.png';
+    }
+    var logoImage = document.querySelector('.create-content .divider img');
+    if (logoImage) {
+        logoImage.src = '../Assets/create-blue.png';
+    }
+}
+
+// Function to update logo image for Default mode
+function updateLogoforDefault() {
+    var logoImage = document.querySelector('.logo img');
+    if (logoImage) {
+        logoImage.src = '../Assets/logo.png';
+    }
+}
+
+// Function to update play button image for Default mode
+function updatePlayforPurp() {
+    var playButton = document.querySelector('.match-start img');
+    if (playButton) {
+        playButton.src = '../Assets/play-purple.png';
+    }
+}
+
+// Function to update logo image for Default mode
+function updateLogoforPurp() {
+    var logoImage = document.querySelector('.logo img');
+    if (logoImage) {
+        logoImage.src = '../Assets/logo-purple.png';
+    }
+}
+
+// Function to update logo image for Default mode
+function updateCreatePurp() {
+    var logoImage = document.querySelector('.create-content .divider img');
+    if (logoImage) {
+        logoImage.src = '../Assets/create-purple.png';
+    }
+    var logoImage = document.querySelector('.global-play img');
+    if (logoImage) {
+        logoImage.src = '../Assets/play-purple.png';
+    }
+    var logoImage = document.querySelector('.global-x img');
+    if (logoImage) {
+        logoImage.src = '../Assets/x-purple.png';
+    }
+    var logoImage = document.querySelector('.global-messages .chat .chat-img-container img');
+    if (logoImage) {
+        logoImage.src = '../Assets/create-purple.png';
+    }
+}
+
+// Function to update play button image for Default mode
+function updatePlayforDefault() {
+    var playButton = document.querySelector('.match-start img');
+    if (playButton) {
+        playButton.src = '../Assets/play.png';
+    }
+}
+// Function to update stylesheet href
+function updateStylesheet(id, href) {
+    var linkElements = document.querySelectorAll('link[rel="stylesheet"]');
+    linkElements.forEach(function(link) {
+        if (link.getAttribute('id') === id) {
+            link.href = href;
+        }
+    });
 }
 
 // Check local storage on page load to maintain mode state
 window.addEventListener('load', function() {
     var mode = localStorage.getItem('mode');
     if (mode === 'dark') {
-        enableDarkMode(); // Apply dark mode if enabled in local storage
+        enableDarkMode();
+    } else if (mode === 'weverse') {
+        enableWeverseMode();
+    } else if (mode === 'purp') {
+        enablePurpMode();
     } else {
-        enableDefaultMode(); // Apply default mode if dark mode is not enabled
+        enableDefaultMode();
     }
 });
 
-// Attach click event listener to the dark mode button
-document.getElementById('darkMode').addEventListener('click', function() {
-    var mode = localStorage.getItem('mode');
-
-    if (mode === 'dark') {
-        // Dark mode is already enabled, do nothing (optional)
-    } else {
-        enableDarkMode(); // Enable dark mode
-    }
-});
-
-// Attach click event listener to the default mode button
-document.getElementById('defaultMode').addEventListener('click', function() {
-    var mode = localStorage.getItem('mode');
-
-    if (mode === 'default') {
-        // Default mode is already enabled, do nothing (optional)
-    } else {
-        enableDefaultMode(); // Enable default mode
-    }
-});
+// Attach click event listeners to mode buttons
+document.getElementById('darkMode').addEventListener('click', enableDarkMode);
+document.getElementById('defaultMode').addEventListener('click', enableDefaultMode);
+document.getElementById('weverseMode').addEventListener('click', enableWeverseMode);
+document.getElementById('purpMode').addEventListener('click', enablePurpMode);
