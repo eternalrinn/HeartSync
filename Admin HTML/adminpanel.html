@@ -35,10 +35,10 @@
 
                 <div class="navigations">
                         <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
-                        <a href="adminpa.html" class="active-nav"><i class="fa-solid fa-chart-line"></i><p>Dashboard</p></a>
+                        <a href="adminpanel.html" class="active-nav"><i class="fa-solid fa-chart-line"></i><p>Dashboard</p></a>
                         <a href="adminactivities.html"><i class="fa-solid fa-clipboard"></i><p>Activities</p></a>
                         <a href="adminupdate.html"><i class="fa-solid fa-wrench"></i><p>Update logs</p></a>
-                        <a href="adminnotifications.html"><i class="fa-solid fa-gear"></i><p>Settings</p></a>
+                        <a href="adminsettings.html"><i class="fa-solid fa-gear"></i><p>Settings</p></a>
                         
                 </div>
             </nav>
@@ -51,14 +51,18 @@
                             <p>Admin</p>
                         </div>
                     </a>
-                    <div class="menu-option">
-                        <i class="fa-solid fa-gear"></i>
-                        <p>Settings</p>
-                    </div>
-                    <div class="menu-option">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Switch accounts</p>
-                    </div>
+                    <a href="adminsettings.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-gear"></i>
+                            <p>Settings</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Switch accounts</p>
+                        </div>
+                    </a>
                     <a href="../index.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-right-from-bracket"></i>
@@ -75,10 +79,10 @@
             <nav class="bottomnav">
                 <div class="navigations bottom-navigations">
                         <a href="admin.html"><i class="fa-solid fa-house"></i></a>
-                        <a href="adminpanel.html" class="active-bnav"><i class="fa-solid fa-chart-line"></i></a>
-                        <a href="adminactivities.html"><i class="fa-solid fa-chart-simple"></i></a>
-                        <a href="adminupdate.html"><i class="fa-solid fa-wrench"></i></a>
-                        <a href="adminnotifications.html"><i class="fa-solid fa-gear"></i></a>
+                        <a href="adminstart-match.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i></a>
+                        <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
+                        <a href="adminsettings.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
                         <a href="adminprofile.html">
                             <div class="nav-profile">
                                 <img src="../AdminAssets/Icons/icon2.png">
@@ -90,6 +94,20 @@
             </nav>
         </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+        <div class="popView" id="popView">
+            <h1>Do you want to view user profile?</h1>
+            <div class="pop-op">
+                <a href="adminprofile.html" onclick="showUserProfile()"><p class="yes">Yes</p></a>
+                <p class="no" onclick="showUserProfile()">No</p>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <h1>Do you want to remove this user?</h1>
+            <div class="pop-op">
+                <p class="yes" onclick="showRemove()">Yes</p>
+                <p class="no" onclick="showRemove()">No</p>
+            </div>
+        </div>
         <div class="dashboard">
             <div class="statistics">
                 <div class="statistic-title">
@@ -125,28 +143,28 @@
                         <div class="usernames">
                             <h3 class="checkbox"> <input type="checkbox">Usernames</h3>
                             <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
-                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>2.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>3.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>4.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>5.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>6.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>7.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>8.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>9.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>10.</span>Gehlee </p>
                         </div>
                         <div class="ranks">
                             <h3>Rank</h3>
                             <p><i class="fa-solid fa-crown rank1"></i>1</p>
                             <p><i class="fa-solid fa-crown rank2"></i>2</p>
                             <p><i class="fa-solid fa-crown rank3"></i>3</p>
-                            <p><i class="fa-solid fa-crown rank3"></i>4</p>
-                            <p><i class="fa-solid fa-crown rank3"></i>5</p>
-                            <p><i class="fa-solid fa-crown rank3"></i>6</p>
-                            <p><i class="fa-solid fa-crown rank3"></i>7</p>
-                            <p><i class="fa-solid fa-crown rank3"></i>8</p>
-                            <p><i class="fa-solid fa-crown rank3"></i>9</p>
-                            <p><i class="fa-solid fa-crown rank3"></i>10</p>
+                            <p><i class="fa-solid fa-crown rank4"></i>4</p>
+                            <p><i class="fa-solid fa-crown rank4"></i>5</p>
+                            <p><i class="fa-solid fa-crown rank4"></i>6</p>
+                            <p><i class="fa-solid fa-crown rank4"></i>7</p>
+                            <p><i class="fa-solid fa-crown rank4"></i>8</p>
+                            <p><i class="fa-solid fa-crown rank4"></i>9</p>
+                            <p><i class="fa-solid fa-crown rank4"></i>10</p>
                         </div>
                         <div class="growth">
                             <h3>Growth</h3>
@@ -164,53 +182,53 @@
                         <div class="actions">
                             <h3>Actions</h3>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                             <div class="action-buts">
-                                <i class="fa-solid fa-ban"></i>
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-xmark" onclick="showRemove()"></i>
+                                <i class="fa-solid fa-eye" onclick="showUserProfile()"></i>
                                 <i class="fa-solid fa-up-down"></i>
                             </div>
                         </div>

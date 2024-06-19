@@ -1877,6 +1877,9 @@ body{
     margin: 20px;
     margin-left: 0;
 }
+.user-menu{
+    top: -230px;
+}
 .menu-option{
     display: flex;
     align-items: center;

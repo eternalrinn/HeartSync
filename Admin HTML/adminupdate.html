@@ -34,12 +34,13 @@
                 </a>
 
                 <div class="navigations">
-                        <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
-                        <a href="adminpanel.html"><i class="fa-solid fa-chart-line"></i><p>Dashboard</p></a>
-                        <a href="adminactivities.html"><i class="fa-solid fa-clipboard"></i><p>Activities</p></a>
-                        <a href="adminmessages.html" class="active-nav"><i class="fa-solid fa-wrench"></i><p>Update logs</p></a>
-                        <a href="adminnotifications.html"><i class="fa-solid fa-gear"></i><p>Settings</p></a>
-                </div>
+                    <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
+                    <a href="adminpanel.html"><i class="fa-solid fa-chart-line"></i><p>Dashboard</p></a>
+                    <a href="adminactivities.html"><i class="fa-solid fa-clipboard"></i><p>Activities</p></a>
+                    <a href="adminupdate.html" class="active-nav"><i class="fa-solid fa-wrench"></i><p>Update logs</p></a>
+                    <a href="adminsettings.html"><i class="fa-solid fa-gear"></i><p>Settings</p></a>
+                    
+            </div>
             </nav>
             
             <div class="menu">
@@ -50,14 +51,18 @@
                             <p>Admin</p>
                         </div>
                     </a>
-                    <div class="menu-option">
-                        <i class="fa-solid fa-gear"></i>
-                        <p>Settings</p>
-                    </div>
-                    <div class="menu-option">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Switch accounts</p>
-                    </div>
+                    <a href="adminsettings.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-gear"></i>
+                            <p>Settings</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Switch accounts</p>
+                        </div>
+                    </a>
                     <a href="../index.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-right-from-bracket"></i>
@@ -74,10 +79,10 @@
             <nav class="bottomnav">
                 <div class="navigations bottom-navigations">
                         <a href="admin.html"><i class="fa-solid fa-house"></i></a>
-                        <a href="adminpanel.html"><i class="fa-solid fa-chart-line"></i></a>
-                        <a href="adminactivities.html"><i class="fa-solid fa-chart-simple"></i></a>
-                        <a href="adminupdate.html"  class="active-bnav"><i class="fa-solid fa-wrench"></i></a>
-                        <a href="adminnotifications.html"><i class="fa-solid fa-gear"></i></a>
+                        <a href="adminstart-match.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i></a>
+                        <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
+                        <a href="adminsettings.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
                         <a href="adminprofile.html">
                             <div class="nav-profile">
                                 <img src="../AdminAssets/Icons/icon2.png">
@@ -89,6 +94,20 @@
             </nav>
         </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+<div class="popUpdate" id="popUpdate">
+    <h1>Do you want to push update?</h1>
+    <div class="pop-op">
+        <p class="yes" onclick="showUpdatePrompt()">Yes</p>
+        <p class="no" onclick="showUpdatePrompt()">No</p>
+    </div>
+</div>
+<div class="popRevert" id="popRevert">
+    <h1>Do you want to revert update?</h1>
+    <div class="pop-op">
+        <p class="yes" onclick="showRevertPrompt()">Yes</p>
+        <p class="no" onclick="showRevertPrompt()">No</p>
+    </div>
+</div>
 <div class="mobile-prompt">
     <i class="fa-solid fa-laptop"></i>
     <h1>Must be on desktop to use this feature!</h1>
@@ -160,68 +179,68 @@
             <div class="update-logs">
                 <h3>Actions</h3>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up"></i>
-                    <i class="fa-solid fa-circle push-up"></i>
+                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
+                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
                 </div>
 
             </div>

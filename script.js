@@ -346,17 +346,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.getElementById("login-form");
     const signUpForm = document.getElementById("sign-up");
 
+    loginLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        signUpForm.style.display = "none";
+        loginForm.style.display = "flex";
+    });
+    
     createAccountLink.addEventListener("click", function(event) {
         event.preventDefault();
         loginForm.style.display = "none";
         signUpForm.style.display = "flex";
     });
 
-    loginLink.addEventListener("click", function(event) {
-        event.preventDefault();
-        signUpForm.style.display = "none";
-        loginForm.style.display = "flex";
-    });
 });
 
 //SIGNUP AND LOGIN
@@ -378,6 +379,122 @@ let showMenuBar = function(){
     }
 }
 //SHOW MENU BAR
+
+//SHOWREMOVE 
+const showRemoveUser = document.querySelector('#popup');
+let removeClicked = true;
+
+let showRemove = function(){
+    if (removeClicked){
+        showRemoveUser.style.display = 'flex';
+        showViewUser.style.display = 'none';
+        removeClicked = false;
+    }
+    else{
+        showRemoveUser.style.display = 'none';
+        removeClicked = true;
+    }
+}
+//SHOWREMOVE 
+
+
+//SHOWVIEW 
+const showViewUser = document.querySelector('#popView');
+let viewClicked = true;
+
+let showUserProfile = function(){
+    if (viewClicked){
+        showViewUser.style.display = 'flex';
+        showRemoveUser.style.display = 'none';
+        viewClicked = false;
+    }
+    else{
+        showViewUser.style.display = 'none';
+        viewClicked = true;
+    }
+}
+//SHOWVIEW 
+
+//SHOWBAN 
+const showBanUser = document.querySelector('#popBan');
+let BanClicked = true;
+
+let showuserBan = function(){
+    if (BanClicked){
+        showBanUser.style.display = 'flex';
+        showRemoveAct.style.display = 'none';
+        BanClicked = false;
+    }
+    else{
+        showBanUser.style.display = 'none';
+        BanClicked = true;
+    }
+}
+//SHOWBAN 
+
+//SHOWREMOVE 
+const showRemoveAct = document.querySelector('#popRemove');
+let ActClicked = true;
+
+let showactRemove = function(){
+    if (ActClicked){
+        showRemoveAct.style.display = 'flex';
+        showBanUser.style.display = 'none';
+        ActClicked = false;
+    }
+    else{
+        showRemoveAct.style.display = 'none';
+        ActClicked = true;
+    }
+}
+
+//SHOWREMOVE 
+
+//SHOWUPDATE 
+const showUpdate = document.querySelector('#popUpdate');
+let UpdClicked = true;
+
+let showUpdatePrompt = function(){
+    if (UpdClicked){
+        showUpdate.style.display = 'flex';
+        showRevert.style.display = 'none';
+        UpdClicked = false;
+    }
+    else{
+        showUpdate.style.display = 'none';
+        UpdClicked = true;
+    }
+}
+
+//SHOWUPDATE 
+
+//SHOWREVERT 
+const showRevert = document.querySelector('#popRevert');
+let revClicked = true;
+
+let showRevertPrompt = function(){
+    if (revClicked){
+        showRevert.style.display = 'flex';
+        showUpdate.style.display = 'none';
+        revClicked = false;
+    }
+    else{
+        showRevert.style.display = 'none';
+        revClicked = true;
+    }
+}
+
+//SHOWREVERT 
+
+
+
+
+
+
+
+
+
+
 
 // Function to enable dark mode
 function enableDarkMode() {
