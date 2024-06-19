@@ -6,7 +6,7 @@
     <title>HeartSync/Find-Match/</title>
     <link rel="stylesheet" href="../style.css" id="themes">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="../Assets/logo.png">
+    <link rel="icon" href="../../Assets/logo.png">
 </head>
 <body>
     <main class="findmatch-main">
@@ -15,14 +15,14 @@
         <div class="navbar">
             <nav class="bottomnav">
                 <div class="navigations bottom-navigations">
-                        <a href="home.html"><i class="fa-solid fa-house"></i></a>
-                        <a href="start-match.html" class="active-bnav"><i class="fa-solid fa-heart"></i></a>
-                        <a href="videos.html"><i class="fa-solid fa-clapperboard"></i></a>
-                        <a href="messages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
-                        <a href="notifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
-                        <a href="profile.html">
+                    <a href="admin.html"><i class="fa-solid fa-house"></i></a>
+                    <a href="adminstart-match.html" class="active-bnav"><i class="fa-solid fa-heart"></i></a>
+                    <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i></a>
+                    <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
+                    <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
+                    <a href="adminprofile.html">
                             <div class="nav-profile">
-                                <img src="../Assets/profile.jpg">
+                                <img src="../AdminAssets/Icons/icon2.png">
                             </div>
                         </a>
                 </div>
@@ -44,27 +44,50 @@
                     </div>
                 </div>
                 
-                <a href="profile.html">
+                <a href="adminprofile.html">
                     <div class="profile">
-                        <img src="../Assets/profile.jpg">
+                        <img src="../AdminAssets/Icons/icon2.png">
                         <div class="names">
-                            <h4>Gehlee Dangca</h4>
-                            <p>@Gehl</p>
+                            <h4>Gehlee</h4>
+                            <p>@Goddess</p>
                         </div>
                     </div>
                 </a>
 
                 <div class="navigations">
-                        <a href="home.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
-                        <a href="start-match.html" class="active-nav"><i class="fa-solid fa-heart"></i><p>Find Match</p></a>
-                        <a href="videos.html"><i class="fa-solid fa-clapperboard"></i><p>Videos</p></a>
-                        <a href="messages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div>  <p>Messages</p></a>
-                        <a href="notifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div>  <p>Notifications</p></a>
+                        <a href="adminpanel.html"><i class="fa-solid fa-screwdriver-wrench"></i><p>Admin</p></a>
+                        <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
+                        <a href="adminstart-match.html" class="active-nav"><i class="fa-solid fa-heart"></i><p>Find Match</p></a>
+                        <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i><p>Videos</p></a>
+                        <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i><div class="alert"><h5>7</h5></div>  <p>Messages</p></a>
+                        <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div>  <p>Notifications</p></a>
                 </div>
             </nav>
             
             <div class="menu">
-                <a href="#"><i class="fa-solid fa-bars"></i><p>Menu</p></a>
+                <div class="menu-bar" id="menu-bar">
+                    <a href="adminpanel.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <p>Admin</p>
+                        </div>
+                    </a>
+                    <div class="menu-option">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Settings</p>
+                    </div>
+                    <div class="menu-option">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Switch accounts</p>
+                    </div>
+                    <a href="../index.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p>Log out</p>
+                        </div>
+                    </a>
+                </div>
+                <a href="javascript:void(0);" class="main-menu" onclick="showMenuBar()"><i class="fa-solid fa-bars"></i><p>Menu</p></a>
             </div>
         </div>
 
@@ -74,30 +97,17 @@
         <div class="match-left" id="match-left">
             <div class="matchprof-container">
                 <div class="match-profile">
-                    <img src="../Assets/stories/icon1.png">
-                    <h1>Gehlee Gimena</h1>
+                    <img src="../Assets/groups/group1.jpg">
+                    <h1>?????</h1>
                 </div>
                 <div class="hobbies">
-                    <p>INFP</p>
-                    <p>Dancing</p>
-                    <p>Playing Video Games</p>
-                    <p>Watching K-Drama</p>
-                    <p>Listening to Music</p>
                 </div>
                 <div class="match-percent">
-                    <p>89% Match</p>
+                    <p>Match Percentage</p>
                 </div>
             </div>
             <div class="match-chatbox">
                 <p class="chatstart">Start of conversation...</p>
-                <div class="match-chat">
-                    <h1>You:</h1>
-                    <p>Taga saan ka po?</p>
-                </div>
-                <div class="match-chat">
-                    <h1>Gehlee Gimena:</h1>
-                    <p>Sa puso mooo!!</p>
-                </div>
             </div>  
             <div class="match-type">
                 <div class="match-input">
@@ -110,24 +120,10 @@
             </div> 
         </div>
         <div class="match-right" id="match-right">
-            <div class="caller-container">
-                <div class="caller-profile">
-                    <img src="../Assets/stories/icon1.png">
-                    <h1>Gehlee Gimena</h1>
-                </div>
-                <img src="../Assets/stories/vcall.jpg">
+            <div class="match-start">
+                <a href="adminfindmatch.html"><img src="../Assets/play.png"></a>
             </div>
             <div class="match-right-divider">
-                <div class="hobbies">
-                    <p>INFP</p>
-                    <p>Dancing</p>
-                    <p>Playing Video Games</p>
-                    <p>Watching K-Drama</p>
-                    <p>Listening to Music</p>
-                </div>
-                <div class="match-percent">
-                    <p>89% Match</p>
-                </div>
             </div>
             <div class="match-buttons">
                 <div class="mathbut">

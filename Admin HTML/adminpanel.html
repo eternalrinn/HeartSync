@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartSync/Home/</title>
+    <link rel="stylesheet" href="../style.css" id="themes">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../Assets/logo.png">
+</head>
+<body>
+    <main class="admin-main">
+        <div class="sidebar">
+            <nav class="sidenav">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="../Assets/logo.png">
+                        <h1>Heart<span>Sync</span></h1>
+                    </div>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                
+                <a href="adminprofile.html">
+                    <div class="profile">
+                        <img src="../AdminAssets/Icons/icon2.png">
+                        <div class="names">
+                            <h4>Gehlee</h4>
+                            <p>@Goddess</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="navigations">
+                        <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
+                        <a href="adminpa.html" class="active-nav"><i class="fa-solid fa-chart-line"></i><p>Dashboard</p></a>
+                        <a href="adminactivities.html"><i class="fa-solid fa-clipboard"></i><p>Activities</p></a>
+                        <a href="adminupdate.html"><i class="fa-solid fa-wrench"></i><p>Update logs</p></a>
+                        <a href="adminnotifications.html"><i class="fa-solid fa-gear"></i><p>Settings</p></a>
+                        
+                </div>
+            </nav>
+            
+            <div class="menu">
+                <div class="menu-bar" id="menu-bar">
+                    <a href="adminpanel.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <p>Admin</p>
+                        </div>
+                    </a>
+                    <div class="menu-option">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Settings</p>
+                    </div>
+                    <div class="menu-option">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Switch accounts</p>
+                    </div>
+                    <a href="../index.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p>Log out</p>
+                        </div>
+                    </a>
+                </div>
+                <a href="javascript:void(0);" class="main-menu" onclick="showMenuBar()"><i class="fa-solid fa-bars"></i><p>Menu</p></a>
+            </div>
+        </div>
+<!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+
+        <div class="navbar">
+            <nav class="bottomnav">
+                <div class="navigations bottom-navigations">
+                        <a href="admin.html"><i class="fa-solid fa-house"></i></a>
+                        <a href="adminpanel.html" class="active-bnav"><i class="fa-solid fa-chart-line"></i></a>
+                        <a href="adminactivities.html"><i class="fa-solid fa-chart-simple"></i></a>
+                        <a href="adminupdate.html"><i class="fa-solid fa-wrench"></i></a>
+                        <a href="adminnotifications.html"><i class="fa-solid fa-gear"></i></a>
+                        <a href="adminprofile.html">
+                            <div class="nav-profile">
+                                <img src="../AdminAssets/Icons/icon2.png">
+                            </div>
+                        </a>
+                </div>
+            </nav>
+        
+            </nav>
+        </div>
+<!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+        <div class="dashboard">
+            <div class="statistics">
+                <div class="statistic-title">
+                    <h1>Users</h1>
+                    <p>Users Summary</p>
+                </div>
+                <div class="boards">
+                    <div class="board">
+                        <i class="fa-solid fa-user board1"></i>
+                        <h2>1.3M <br><span>Users</span></h2>
+                    </div>
+                    <div class="board">
+                        <i class="fa-regular fa-user board2"></i>
+                        <h2>234k <br><span>New users</span></h2>
+                    </div>
+                    <div class="board">
+                        <i class="fa-solid fa-user-plus board3"></i>
+                        <h2>13% <br><span>User growth</span></h2>
+                    </div>
+                    <div class="board">
+                        <i class="fa-solid fa-user-large-slash board4"></i>
+                        <h2>49k <br><span>Banned users</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="leaderboards">
+                <div class="leaderboards-title">
+                    <h1>Leaderboards</h1>
+                    <p>Top 10 most followed users</p>
+                </div>
+                <div class="leaders-container">
+                    <div class="leaderflex">
+                        <div class="usernames">
+                            <h3 class="checkbox"> <input type="checkbox">Usernames</h3>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                            <p><input type="checkbox"><span>1.</span>Gehlee </p>
+                        </div>
+                        <div class="ranks">
+                            <h3>Rank</h3>
+                            <p><i class="fa-solid fa-crown rank1"></i>1</p>
+                            <p><i class="fa-solid fa-crown rank2"></i>2</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>3</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>4</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>5</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>6</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>7</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>8</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>9</p>
+                            <p><i class="fa-solid fa-crown rank3"></i>10</p>
+                        </div>
+                        <div class="growth">
+                            <h3>Growth</h3>
+                            <p>10%</p>
+                            <p>8%</p>
+                            <p>1.5%</p>
+                            <p>3.9%</p>
+                            <p>6.9%</p>
+                            <p>23%</p>
+                            <p>14%</p>
+                            <p>7.8%</p>
+                            <p>3.1%</p>
+                            <p>23.1%</p>
+                        </div>
+                        <div class="actions">
+                            <h3>Actions</h3>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                            <div class="action-buts">
+                                <i class="fa-solid fa-ban"></i>
+                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-up-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </main>
+    <script src="https://kit.fontawesome.com/ee2f1420c9.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

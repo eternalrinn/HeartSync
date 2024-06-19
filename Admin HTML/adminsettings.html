@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartSync/Home/</title>
+    <link rel="stylesheet" href="../style.css" id="themes">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="../Assets/logo.png">
+</head>
+<body>
+    <main class="settings-main">
+        <div class="sidebar">
+            <nav class="sidenav">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="../Assets/logo.png">
+                        <h1>Heart<span>Sync</span></h1>
+                    </div>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                
+                <a href="adminprofile.html">
+                    <div class="profile">
+                        <img src="../AdminAssets/Icons/icon2.png">
+                        <div class="names">
+                            <h4>Gehlee</h4>
+                            <p>@Goddess</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="navigations">
+                        <a href="adminpanel.html"><i class="fa-solid fa-screwdriver-wrench"></i><p>Admin</p></a>
+                        <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
+                        <a href="adminstart-match.html"><i class="fa-solid fa-heart"></i><p>Find Match</p></a>
+                        <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i><p>Videos</p></a>
+                        <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i><div class="alert"><h5>7</h5></div>  <p>Messages</p></a>
+                        <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div>  <p>Notifications</p></a>
+                        
+                </div>
+            </nav>
+            
+            <div class="menu">
+                <div class="menu-bar" id="menu-bar">
+                    <a href="adminpanel.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <p>Admin</p>
+                        </div>
+                    </a>
+                    <div class="menu-option">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Settings</p>
+                    </div>
+                    <div class="menu-option">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Switch accounts</p>
+                    </div>
+                    <a href="../index.html">
+                        <div class="menu-option">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p>Log out</p>
+                        </div>
+                    </a>
+                </div>
+                <a href="javascript:void(0);" class="main-menu" onclick="showMenuBar()"><i class="fa-solid fa-bars"></i><p>Menu</p></a>
+            </div>
+        </div>
+<!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+
+        <div class="navbar">
+            <nav class="bottomnav">
+                <div class="navigations bottom-navigations">
+                        <a href="admin.html"><i class="fa-solid fa-house"></i></a>
+                        <a href="adminstart-match.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i></a>
+                        <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
+                        <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
+                        <a href="adminprofile.html">
+                            <div class="nav-profile">
+                                <img src="../AdminAssets/Icons/icon2.png">
+                            </div>
+                        </a>
+                </div>
+            </nav>
+        
+            </nav>
+        </div>
+<!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+        <div class="settings">
+            <div class="settings-sidebar">
+                <div class="settings-title">
+                    <h1>Settings</h1>
+                    <div class="settings-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="settings-nav">
+                    <a href="">General</a>
+                    <a href="">Privacy</a>
+                    <a href="">Themes</a>
+                    <a href="">Account</a>
+                </div>
+            </div>
+            <div class="settings-content">
+                <div class="general">
+                    <div class="general-title">
+                        <h1>General</h1>
+                    </div>
+                    <div class="general-content">
+                        <div class="personal-informations">
+                            <div class="personal-container">
+                                <div class="personal-det">
+                                    <h2>Personal details</h2>
+                                    <p>Your personal information is only visible to people you follow.</p>
+                                </div>
+                                <div class="pers">
+                                    <div class="pers-left">
+                                        <h3>Username</h3>
+                                        <p>Gehlee</p>
+                                    </div>
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+                                <div class="pers">
+                                    <div class="pers-left">
+                                        <h3>Contact info</h3>
+                                        <p>eternalrinn@0987@gmail.com</p>
+                                    </div>
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+                                <div class="pers">
+                                    <div class="pers-left">
+                                        <h3>Birthday</h3>
+                                        <p>August 19, 2007</p>
+                                    </div>
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="general-notifications">
+                                <div class="notif-title">
+                                    <h2>Notifications</h2>
+                                    <p>Modify notification settings</p>
+                                </div>
+                                <div class="notif-content">
+                                    <div class="notifs">
+                                        <p>Mentions</p>
+                                        <button>Enable</button>
+                                    </div>
+                                    <div class="notifs">
+                                        <p>Tags</p>
+                                        <button>Enable</button>
+                                    </div>
+                                    <div class="notifs">
+                                        <p>Reactions</p>
+                                        <button>Enable</button>
+                                    </div>
+                                    <div class="notifs">
+                                        <p>Comments</p>
+                                        <button>Enable</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="language">
+                                <div class="language-title">
+                                    <h2>Language</h2>
+                                    <p>Choose your prefer language</p>
+                                </div>
+                                <div class="languages">
+                                    <select>
+                                        <option>Tagalog</option>
+                                        <option>English</option>
+                                        <option>Japanese</option>
+                                        <option>Korean</option>
+                                        <option>Chinese</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="privacy">
+                    <div class="privacy-title">
+                        <h1>Privacy</h1>
+                        <p>What is the Privacy Policy and what does it cover?</p>
+                    </div>
+                    <div class="privacy-content">
+                        <div class="priv">
+                            <h1>Lorem</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.</p>
+                        </div>
+                        <div class="priv">
+                            <h1>Lorem</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.</p>
+                        </div>
+                        <div class="priv">
+                            <h1>Lorem</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.</p>
+                        </div>
+                        <div class="priv">
+                            <h1>Lorem</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Quia, numquam earum odit, repellat dolore quae sint, veritatis modi quis voluptatem eum perferendis 
+                                consectetur ullam ex ea! Exercitationem dicta mollitia incidunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="themes">
+                    <div class="theme-title">
+                        <h1>Themes</h1>
+                        <p>Change the theme to your style!</p>
+                    </div>
+                    <div class="theme-content">
+                        <div class="theme">
+                            <h2>Default</h2>
+                            <button class="but1" id="defaultMode">Enable</button>
+                        </div>
+                        <div class="theme">
+                            <h2>Dark Mode</h2>
+                            <button class="but2" id="darkMode">Enable</button>
+                        </div>
+                        <div class="theme">
+                            <h2>Weverse Blue</h2>
+                            <button class="but3">Enable</button>
+                        </div>
+                        <div class="theme">
+                            <h2>Gradient Purple</h2>
+                            <button class="but4">Enable</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+    <script src="https://kit.fontawesome.com/ee2f1420c9.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
