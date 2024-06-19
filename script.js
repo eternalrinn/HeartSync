@@ -361,5 +361,76 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //SIGNUP AND LOGIN
 
+//SHOW MENU BAR
+const showMenu = document.querySelector('#menu-bar');
+let menuClicked = true;
 
 
+let showMenuBar = function(){
+    if (menuClicked){
+        showMenu.style.display = 'flex';
+        menuClicked = false;
+        
+    }
+    else{
+        showMenu.style.display = 'none';
+        menuClicked = true;
+    }
+}
+//SHOW MENU BAR
+
+// Function to enable dark mode
+function enableDarkMode() {
+    var linkElements = document.querySelectorAll('link#themes[rel="stylesheet"]');
+    
+    linkElements.forEach(function(link) {
+        link.href = '../darkmodecss.css'; // Set the new href value for dark mode
+    });
+
+    // Store the dark mode state in local storage
+    localStorage.setItem('mode', 'dark');
+}
+
+// Function to enable default mode
+function enableDefaultMode() {
+    var linkElements = document.querySelectorAll('link#themes[rel="stylesheet"]');
+    
+    linkElements.forEach(function(link) {
+        link.href = '../style.css'; // Set the new href value for default mode
+    });
+
+    // Store the default mode state in local storage
+    localStorage.setItem('mode', 'default');
+}
+
+// Check local storage on page load to maintain mode state
+window.addEventListener('load', function() {
+    var mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+        enableDarkMode(); // Apply dark mode if enabled in local storage
+    } else {
+        enableDefaultMode(); // Apply default mode if dark mode is not enabled
+    }
+});
+
+// Attach click event listener to the dark mode button
+document.getElementById('darkMode').addEventListener('click', function() {
+    var mode = localStorage.getItem('mode');
+
+    if (mode === 'dark') {
+        // Dark mode is already enabled, do nothing (optional)
+    } else {
+        enableDarkMode(); // Enable dark mode
+    }
+});
+
+// Attach click event listener to the default mode button
+document.getElementById('defaultMode').addEventListener('click', function() {
+    var mode = localStorage.getItem('mode');
+
+    if (mode === 'default') {
+        // Default mode is already enabled, do nothing (optional)
+    } else {
+        enableDefaultMode(); // Enable default mode
+    }
+});

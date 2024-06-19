@@ -5,7 +5,8 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-
+}
+:root{
     --black: #000000;
     --gray: #eeeeee;
     --medgray: #979797;
@@ -16,9 +17,12 @@
     --white: #ffffff;
     --palepink: #fff5f6;
     --pink: #f14b61;
+    --weverseblue: #07d8e2;
+    --gradientpurple: #7119ff;
+
+
     --bradius: 5px;
 }
-
 .hide{
     display: none;
 }
@@ -39,6 +43,9 @@ body{
 }
 .logo span{
     color: var(--pink);
+}
+.logo-container h1{
+    color: var(--black);
 }
 /* MOBILE MODE */
 .navbar{
@@ -102,7 +109,7 @@ body{
 .navigations i{
     font-size: 23px;
 }
-.navigations a, .profile{
+.navigations a, .profile, .main-menu{
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -131,9 +138,9 @@ body{
 }
 .navigations a:hover,
  .profile:hover,
- .menu:hover,
+ .main-menu:hover,
  .profile:hover h4,
- .menu:hover a,
+ .menu-option:hover,
  .active-nav,
  .active-nav i,
  .active-nav p,
@@ -167,7 +174,7 @@ body{
     font-weight: 500;
 }
 .menu{
-    padding: 20px;
+    position: relative;
 }
 .menu i{
     font-size: 25px;
@@ -309,12 +316,16 @@ body{
 .create-username h4{
     font-weight: 600;
 }
+
 .posts{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 100px;
     width: 100%;
+}
+.post p, .post h4{
+    color: var(--black);
 }
 .react-buts .left-reacts .fa-solid, .react-buts .reacts .fa-solid, .video-reactions .reactions .fa-solid{
     color: var(--pink);
@@ -468,6 +479,8 @@ body{
     width: 100%;
     border: none;
     outline: none;
+    color: var(--black);
+    background-color: transparent;
 }
 
 .reaction-count{
@@ -498,6 +511,8 @@ body{
     border: none;
     outline: none;
     font-size: 18px;
+    color: var(--black);
+    background-color: transparent;
 }
 .attach{
     display: flex;
@@ -534,6 +549,9 @@ body{
     flex-direction: column;
     width: 100%;
     height: 100vh;
+}
+.right-sidebar , .friend p{
+    color: var(--black);
 }
 .right-sidebar hr{
     width: 100%;
@@ -904,6 +922,10 @@ body{
     color: var(--pink);
     transition: all 0.1s ease;
     border-top: 3px solid var(--pink);
+}
+.bio-button i{
+    font-size: 25px;
+    color: var(--black);
 }
 
 
@@ -1656,17 +1678,33 @@ body{
 
 /* -------------------------------FIND MATCH CSS--------------------------------------- */
 .findmatch-main{
+    position: relative;
     display: grid;
-    grid-template-columns: 15% 75%;
+    grid-template-columns: 15% 80%;
 }
 
 .match-container{
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 1rem;
-
     width: 100%;
     margin: 30px;
+}
+.match-start{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    height: 70%;
+    width: 100%;
+    flex-grow: 1;
+}
+.match-start img{
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
 }
 .matchprof-container{
     display: flex;
@@ -1680,7 +1718,15 @@ body{
     width: 100%;
     background-color: var(--white);
 }
-
+.match-right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+}
 .match-profile{
     display: flex;
     align-items: center;
@@ -1753,6 +1799,7 @@ body{
     color: var(--pink);
 }
 .caller-container{
+    position: relative;
     display: flex;
     justify-content: center;
     background-color: var(--black);
@@ -1764,15 +1811,6 @@ body{
     object-fit: cover;
     width: 50%;
     height: 100%;
-}
-.match-right{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 100%;
-    width: 100%;
-    background-color: var(--white);
 }
 .match-chat{
     display: flex;
@@ -1824,9 +1862,364 @@ body{
 }
 /* -------------------------------FIND MATCH CSS--------------------------------------- */
 
+/* -------------------------------MENU BAR CSS--------------------------------------- */
 
+.menu-bar{
+    position: absolute;
+    top: -300px;
+    display: none;
+    flex-direction: column;
+    height: fit-content;
+    width: 250px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: var(--bradius);
+    margin: 20px;
+    margin-left: 0;
+}
+.menu-option{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding: 20px;
+}
+.menu-bar a{
+    font-size: 1rem;
+}
+/* -------------------------------MENU BAR CSS--------------------------------------- */
 
+/* -------------------------------ADMIN PANEL CSS--------------------------------------- */
+.admin-main{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+}
+.statistics{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    width: 100vw;
+    gap: 2rem;
+    background-color: var(--white);
+}
+.statistics h1, .leaderboards-title h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.statistics p, .leaderboards-title p{
+    color: var(--darkgray);
+}
+.boards{
+    display: flex;
+    gap: 1rem;
+}
+.board{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    border-radius: var(--bradius);
+    flex-grow: 1;
+}
+.board span{
+    font-weight: 500;
+    font-size: 14px;
+}
+.board i{
+    font-size: 25px;
+}
+.board h2{
+    text-align: left;
+    font-size: 1rem;
+}
+.board1{
+    color: #fa5a7d;
+}
+.board2{
+    color: #fe977c;
+}
+.board3{
+    color: #3cd756;
+}
+.board4{
+    color: #bf83fe;
+}
+.board:nth-child(1){
+    background-color: #ffe2e6;
+}
+.board:nth-child(2){
+    background-color: #fff4de;
+}
+.board:nth-child(3){
+    background-color: #dcfce7;
+}
+.board:nth-child(4){
+    background-color: #f4e8ff;
+}
 
+.leaderboards{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    flex-grow: 1;
+    padding: 20px;
+    border-radius: var(--bradius);
+    margin: 20px;
+    gap: 2rem;
+}
+
+.leaderflex{
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+}
+.checkbox{
+    display: flex;
+    gap: 0.5rem;
+}
+.usernames, .ranks, .growth, .actions, .update-logs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.usernames span{
+    color: var(--black);
+}
+.usernames p{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--darkgray);
+}
+.ranks p{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.rank1{
+    color: #fda642;
+}
+.rank2{
+    color: #b4b4b4;
+}
+.rank3{
+    color: #8f614f;
+}
+.growth, .actions{
+    align-items: center;
+}
+.growth p{
+    color: var(--darkgray);
+}   
+.actions i{
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--gray);
+    padding: 4px;
+    width: 35px;
+    color: var(--darkgray);
+}
+
+.activities{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin: 20px;
+    border-radius: var(--bradius);
+    background-color: var(--white);
+}
+.activities-flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.logs-nav{
+    display: flex;
+    justify-content: space-around;
+}
+.activities h3, .leaderboards h3{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.activities{
+    display: flex;
+    gap: 1rem;
+}
+.push-up{
+    cursor: pointer;
+    color: var(--green);
+}
+.revert-up{
+    cursor: pointer;
+    color: var(--red);
+}
+.mobile-prompt{
+    display: none;
+}
+/* -------------------------------ADMIN PANEL CSS--------------------------------------- */
+
+/* -------------------------------SETTINGS CSS--------------------------------------- */
+.settings-main{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.settings{
+    display: flex;
+    margin: 20px;
+    height: 95vh;
+}
+.settings-title h1{
+    font-size: 30px;
+}
+.settings-sidebar, .settings-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    background-color: var(--white);
+}
+.settings-sidebar{
+    border-right: 10px solid var(--lightblue);
+}
+.settings-search{
+    display: flex;
+    align-items: center;
+    border-radius: var(--bradius);
+    padding: 8px 14px;
+    gap: 0.5rem;
+    background-color: var(--gray);
+    width: fit-content;
+}
+.settings-search input{
+    color: var(--darkgray);
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.settings-search i{
+    color: var(--darkgray);
+}
+.settings-nav{
+    display: flex;
+    flex-direction: column;
+}
+.settings-nav a{
+    border-radius: var(--bradius);
+    font-weight: 500;
+    width: fit-content;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--black);
+}
+.settings-nav a:hover{
+    background-color: var(--gray);
+}
+.personal-informations{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.settings-content{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    overflow-y: scroll;
+}
+.pers{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: var(--bradius);
+    justify-content: space-between;
+}
+.pers:hover{
+    background-color: var(--gray);
+}
+.notifs{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 50% 50%;
+}
+.notifs p{
+    font-weight: 500;
+}
+.notifs button{
+    cursor: pointer;
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--pink);
+    color: var(--white);
+    border-radius: var(--bradius);
+}
+select{
+    font-size: 1rem;
+}
+.privacy{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.privacy-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.priv h1{
+    font-size: 25px;
+}
+.themes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20vw;
+}
+.theme{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 10px;
+}
+.theme button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+}
+.theme h2{
+    font-size: 20px;
+}
+.but1{
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--pink);
+}
+.but2{
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--black);
+}
+.but3{
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--weverseblue);
+}
+.but4{
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--gradientpurple);
+}
+/* -------------------------------SETTINGS CSS--------------------------------------- */
 @media (max-width:1520px) {
     .sidebar{
         min-width: 250px;
@@ -1855,7 +2248,7 @@ body{
     .sidebar{
         min-width: 76px;
     }
-    .sidebar p, .sidebar h4, .videos-sidebar{
+    .navigations p, .sidebar h4, .videos-sidebar, .profile p, .main-menu p{
         display: none;
     }
     .post, .create-post{
@@ -2179,7 +2572,48 @@ font-size: 50px;
 .match-right{
     gap: 1rem;
 }
-
+.match-start{
+    height: 70vh;
+}
+.dashboard{
+    width: 100vw;
+    overflow-x: hidden;
+}
+.statistics, .leaderboards{
+    margin: 0;
+    width: 100vw;
+}
+.mobile-prompt{
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--white);
+    overflow: hidden;
+}
+.mobile-prompt h1{
+    font-size: 25px;
+    text-align: center;
+}
+.mobile-prompt i{
+    font-size: 40px;
+    color: var(--pink);
+}
+.leaderflex{
+    width: 100vw;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.boards{
+    width: 100%;
+}
+.activities{
+    display: none;
+}
 }
 /* MOBILE  NAVBAR */
 
