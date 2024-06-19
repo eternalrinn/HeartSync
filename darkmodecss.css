@@ -1945,7 +1945,7 @@ body{
 .caller-profile h1{
     font-weight: 500;
     font-size: 1rem;
-    color: var(--white);
+    color: var(--persistentwhite);
 }
 .match-right .hobbies, .match-right .match-percent{
     display: none;
