@@ -88,7 +88,69 @@
     </nav>
 </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
-        <div class="settings">
+<div class="deact-ac" id="deact-ac">
+    <div class="changem-title">
+        <h1>Account Settings</h1>
+    </div>
+    <div class="dew">
+        <div class="dew-container">
+            <h2>Deactivate account</h2>
+            <input type="radio" name="deac">
+        </div>
+        <p>Deactivate your account temporarily and come back anytime you want.</p>
+    </div>
+    <div class="dew">
+        <div class="dew-container">
+            <h2>Delete account</h2>
+            <input type="radio" name="deac">
+        </div>
+        <p>Delete your account forever, all your information will be gone forever if you delete your account.</p>
+    </div>
+    <div class="dew">
+        <div class="dew-yes">
+            <h2>Type "Yes" to confirm</h2>
+            <input type="text">
+        </div>
+        <button onclick="showDeactAccount()">Submit</button>
+    </div>
+</div>
+<div class="change-email" id="change-email">
+    <div class="changem-title">
+        <h1>Account Settings</h1>
+    </div>
+    <div class="new">
+        <h2>New Email Address</h2>
+        <input type="text">
+    </div>
+    <div class="new">
+        <h2>Confirm Email Address</h2>
+        <input type="text">
+    </div>
+    <div class="new">
+        <h2>Send Code</h2>
+        <input type="text">
+        <button onclick="showChangeEmail()">Submit</button>
+    </div>
+</div>
+<div class="change-password" id="change-password">
+    <div class="changem-title">
+        <h1>Account Settings</h1>
+    </div>
+    <div class="new">   
+        <h2>Enter old password</h2>
+        <input type="password">
+    </div>
+    <div class="new">
+        <h2>Enter new password</h2>
+        <input type="password">
+    </div>
+    <div class="new">
+        <h2>Confirm new password</h2>
+        <input type="password">
+        <button onclick="showChangePass()">Submit</button>
+    </div>
+</div>  
+            <div class="settings">
             <div class="settings-sidebar">
                 <div class="settings-title">
                     <h1>Settings</h1>
@@ -98,10 +160,11 @@
                     </div>
                 </div>
                 <div class="settings-nav">
-                    <a href="">General</a>
-                    <a href="">Privacy</a>
-                    <a href="">Themes</a>
-                    <a href="">Account</a>
+                    <a href="#personal-information">General</a>
+                    <a href="#notifications">Notifications</a>
+                    <a href="#privacy">Privacy</a>
+                    <a href="#themee">Themes</a>
+                    <a href="#account-settings">Account</a>
                 </div>
             </div>
             <div class="settings-content">
@@ -109,7 +172,7 @@
                     <div class="general-title">
                         <h1>General</h1>
                     </div>
-                    <div class="general-content">
+                    <div class="general-content" id="personal-information">
                         <div class="personal-informations">
                             <div class="personal-container">
                                 <div class="personal-det">
@@ -139,7 +202,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <div class="general-notifications">
+                            <div class="general-notifications" id="notifications">
                                 <div class="notif-title">
                                     <h2>Notifications</h2>
                                     <p>Modify notification settings</p>
@@ -164,7 +227,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <div class="language">
+                            <div class="language" id="language">
                                 <div class="language-title">
                                     <h2>Language</h2>
                                     <p>Choose your prefer language</p>
@@ -185,7 +248,7 @@
                     </div>
                 </div>
 
-                <div class="privacy">
+                <div class="privacy" id="privacy">
                     <div class="privacy-title">
                         <h1>Privacy</h1>
                         <p>What is the Privacy Policy and what does it cover?</p>
@@ -230,7 +293,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="themes">
+                <div class="themes" id="themee">
                     <div class="theme-title">
                         <h1>Themes</h1>
                         <p>Change the theme to your style!</p>
@@ -251,6 +314,33 @@
                         <div class="theme">
                             <h2>Gradient Purple</h2>
                             <button class="but4" id="purpMode">Enable</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="account-settings" id="account-settings">
+                    <div class="acc-title">
+                        <h1>Account Settings</h1>
+                        <p>Update your account security.</p>
+                    </div>
+                    <div class="acc-form">
+                        <div class="accusername">
+                            <h2>Email address</h2>
+                            <div class="userbut">
+                                <p>eternalrinn@gmail.com</p>
+                                <button onclick="showChangeEmail(   )">Edit</button>
+                            </div>
+                            
+                        </div>
+                        <div class="accpass">
+                            <h2>Password</h2>
+                            <div class="passbut">
+                                <p>******</p>
+                                <button onclick="showChangePass()">Edit</button>
+                            </div>
+                        </div>
+                        <div class="deact-acc">
+                            <p onclick="showDeactAccount()">Deactivate and deletion</p>
                         </div>
                     </div>
                 </div>

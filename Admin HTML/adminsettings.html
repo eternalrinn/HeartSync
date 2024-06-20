@@ -94,6 +94,68 @@
     </nav>
 </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+<div class="deact-ac" id="deact-ac">
+    <div class="changem-title">
+        <h1>Account Settings</h1>
+    </div>
+    <div class="dew">
+        <div class="dew-container">
+            <h2>Deactivate account</h2>
+            <input type="radio" name="deac">
+        </div>
+        <p>Deactivate your account temporarily and come back anytime you want.</p>
+    </div>
+    <div class="dew">
+        <div class="dew-container">
+            <h2>Delete account</h2>
+            <input type="radio" name="deac">
+        </div>
+        <p>Delete your account forever, all your information will be gone forever if you delete your account.</p>
+    </div>
+    <div class="dew">
+        <div class="dew-yes">
+            <h2>Type "Yes" to confirm</h2>
+            <input type="text">
+        </div>
+        <button onclick="showDeactAccount()">Submit</button>
+    </div>
+</div>     
+<div class="change-email" id="change-email">
+            <div class="changem-title">
+                <h1>Account Settings</h1>
+            </div>
+            <div class="new">
+                <h2>New Email Address</h2>
+                <input type="text">
+            </div>
+            <div class="new">
+                <h2>Confirm Email Address</h2>
+                <input type="text">
+            </div>
+            <div class="new">
+                <h2>Send Code</h2>
+                <input type="text">
+                <button onclick="showChangeEmail()" >Submit</button>
+            </div>
+        </div>
+        <div class="change-password" id="change-password">
+            <div class="changem-title">
+                <h1>Account Settings</h1>
+            </div>
+            <div class="new">   
+                <h2>Enter old password</h2>
+                <input type="password">
+            </div>
+            <div class="new">
+                <h2>Enter new password</h2>
+                <input type="password">
+            </div>
+            <div class="new">
+                <h2>Confirm new password</h2>
+                <input type="password">
+                <button onclick="showChangePass()" >Submit</button>
+            </div>
+        </div>
         <div class="settings">
             <div class="settings-sidebar">
                 <div class="settings-title">
@@ -178,7 +240,7 @@
                                 <div class="languages">
                                     <select>
                                         <option>Tagalog</option>
-                                        <option>English</option>
+                                        <option selected>English</option>
                                         <option>Japanese</option>
                                         <option>Korean</option>
                                         <option>Chinese</option>
@@ -257,6 +319,33 @@
                         <div class="theme">
                             <h2>Gradient Purple</h2>
                             <button class="but4" id="purpMode">Enable</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="account-settings">
+                    <div class="acc-title">
+                        <h1>Account Settings</h1>
+                        <p>Update your account security.</p>
+                    </div>
+                    <div class="acc-form">
+                        <div class="accusername">
+                            <h2>Email address</h2>
+                            <div class="userbut">
+                                <p>eternalrinn@gmail.com</p>
+                                <button onclick="showChangeEmail()">Edit</button>
+                            </div>
+                            
+                        </div>
+                        <div class="accpass">
+                            <h2>Password</h2>
+                            <div class="passbut">
+                                <p>******</p>
+                                <button onclick="showChangePass()">Edit</button>
+                            </div>
+                        </div>
+                        <div class="deact-acc">
+                            <p onclick="showDeactAccount()">Deactivate and deletion</p>
                         </div>
                     </div>
                 </div>

@@ -1919,10 +1919,10 @@ body{
     display: grid;
     grid-template-columns: 15% 85%;
 }
-.popup, .popView, .popBan, .popRemove, .popUpdate, .popRevert{
+.popup, .popView, .popBan, .popRemove, .popUpdate, .popRevert, .popSuspend{
     padding: 20px;
     border-radius: var(--bradius);
-    position: absolute;
+    position: fixed;
     display: none;
     text-align: center;
     flex-direction: column;
@@ -1939,12 +1939,22 @@ body{
     grid-template-columns: 15% 80%;
 }
 
-.popup h1, .popView h1, .popBan h1, .popRemove h1, .popUpdate h1, .popRevert h1{
+.popup h1, 
+.popView h1, 
+.popBan h1, 
+.popRemove h1, 
+.popUpdate h1,
+.popRevert h1,
+.popSuspend h1{
     font-weight: 500;
     color: var(--black);
     font-size: 1rem;
     width: 100%;
 }
+.popSuspend{
+    gap: 1rem;
+}
+
 .yes{
     cursor: pointer;
     font-weight: 500;
@@ -2035,34 +2045,29 @@ body{
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    flex-grow: 1;
     padding: 20px;
     border-radius: var(--bradius);
     margin: 20px;
     gap: 2rem;
 }
-
+.heart1{
+    display: flex;
+    align-items: center;
+    color: var(--pink);
+}
 .leaderflex{
     display: flex;
     justify-content: space-between;
-    gap: 6rem;
-}
-.checkbox{
-    display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 .usernames, .ranks, .growth, .actions, .update-logs{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
     gap: 1rem;
 }
-.usernames span{
-    color: var(--black);
-}
-.usernames p{
-    display: flex;
-    gap: 0.5rem;
-    color: var(--black);
+.action-buts i{
+    cursor: pointer;
 }
 .ranks p{
     display: flex;
@@ -2081,12 +2086,10 @@ body{
 .rank4{
     color: #d6956a;
 }
-.growth, .actions{
-    align-items: center;
-}
+
 .growth p{
-    color: var(--darkgray);
-}   
+    color: var(--black);
+}
 .actions i{
     cursor: pointer;
     text-align: center;
@@ -2108,8 +2111,9 @@ body{
 }
 .activities-flex{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 5rem;
+    gap: 2rem;
 }
 .logs-nav{
     display: flex;
@@ -2227,14 +2231,18 @@ body{
 }
 .notifs button{
     cursor: pointer;
-    width: 50%;
+    width: fit-content;
     border: none;
     outline: none;
+    padding: 8px 14px;
     background-color: var(--pink);
     color: var(--white);
     border-radius: var(--bradius);
 }
 select{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--pink);
     font-size: 1rem;
 }
 .privacy{
@@ -2263,6 +2271,7 @@ select{
     padding: 10px;
 }
 .theme button{
+    border-radius: var(--bradius);
     cursor: pointer;
     border: none;
     outline: none;
@@ -2292,6 +2301,175 @@ select{
     color: var(--white);
     background-color: var(--gradientpurple);
 }
+.account-settings{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    margin-bottom: 100p;
+}
+.userbut, .passbut{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.userbut button, .passbut button, .dew button{
+    cursor: pointer;    
+    border: none;
+    color: var(--white);
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: var(--bradius);
+    background-color: var(--pink);
+}
+.acc-title h1, 
+.acc-title p, 
+.accusername h2, 
+.accpass h2{
+color: var(--black);}
+
+.accusername h2, .accpass h2{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.userbut p, .passbut p{
+    color: var(--black);
+}
+
+.change-email, .change-password, .deact-ac{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--white);
+    padding: 20px;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.changem-title h1{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--black);
+}
+.new{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.new h2{
+    color: var(--black);
+    font-weight: 500;
+    font-size: 13px;
+}
+.new input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--pink);
+}
+.new button{
+    cursor: pointer ;
+    border-radius: var(--bradius);
+    border: none;
+    color: var(--white);
+    font-weight: 500;
+    padding: 8px 14px;
+    background-color: var(--pink);
+}
+.settings-content::-webkit-scrollbar{
+    display: none;
+}
+.deact-acc p{
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--pink);
+}
+
+.dew{
+    display: flex;
+    flex-direction: column;
+}
+.dew h2{
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.dew-yes{
+    padding: 20px 0 20px 0;
+}
+.dew-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.dew-yes input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--pink);
+    color: var(--black);
+    padding: 8px 14px;
+}
+.dash-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.action-buts{
+    display: flex;
+    gap: 0.5rem;
+}
+.action-buts i{
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.update-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.rank{
+    display: flex;
+    justify-content: space-between;
+}
+.rank p, .growth p{
+    width: 300px;
+}
+
+.violation{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 30vw;
+}
+.violate-but{
+    display: flex;
+    gap: 1rem;
+}
+.violate-but{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.violate-but i{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    color: var(--white);
+}
+
 /* -------------------------------SETTINGS CSS--------------------------------------- */
 @media (max-width:1520px) {
     .sidebar{
@@ -2350,25 +2528,6 @@ select{
     .chat-sidebar{
         width: 100%;
     }
-    .activities{
-        display: none;
-    }
-    .mobile-prompt{
-        position: absolute;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        background-color: var(--white);
-        overflow: hidden;
-    }
-    .mobile-prompt i{
-        font-size: 40px;
-        color: var(--pink);
-    }
 }
 @media (max-width: 1275px) {
     .right-sidebar{
@@ -2402,6 +2561,9 @@ select{
 /* MOBILE  MEDIA QUERY */
 
 @media (max-width: 430px){
+.violation{
+    width: 100vw;
+}
 .home-main{
     display: flex
 }
@@ -2733,6 +2895,13 @@ font-size: 50px;
     border-radius: var(--bradius);
     color: var(--white);
 }
+.activities{
+    margin: 0;
+    width: 100vw;
+}
+.update-container{
+    height: 100vh;
+}
 }
 /* MOBILE  NAVBAR */
 
@@ -2852,6 +3021,9 @@ font-size: 50px;
     }
     .caller-container{
         height: 30%;
+    }
+    .usernames h3, .growth p{
+        font-size: 13px;
     }
 }
 

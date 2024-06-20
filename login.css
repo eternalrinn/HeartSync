@@ -49,9 +49,10 @@ a{
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    padding: 50px;
     width: fit-content;
     background-color: var(--white);
+    height: fit-content;
     border-radius: var(--bradius);
 }
 .right{
@@ -126,12 +127,143 @@ a{
     color: var(--white);
     padding: 8px 14px;
 }
+.continue{
+    display: flex;
+    margin: auto;
+}
 .form-title h1{
     font-size: 1.5rem;
 }
 .form-title p{
     font-size: 13px;
 }
+
+
+
+/* -------------------------------HOBBIES CSS--------------------------------------- */
+.hobbies-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: fit-content;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 40px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.hobbies-choices{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.hob{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 1rem;
+    flex-grow: 1;
+}
+.hob p{
+    color: var(--white);
+    font-weight: 500;
+}
+.hob i{
+    font-size: 40px;
+}
+.hob h2{
+    font-size: 1rem;
+    color: var(--white);
+}
+.pink i{
+    color: #661524;
+}
+.purple i{
+    color: #180c55;
+}
+.green i{
+    color: #07554e;
+}
+.blue i{
+    color: #150a46;
+}
+.hob:nth-child(1){
+    background-color: #ff6380;
+}
+.hob:nth-child(2){
+    background-color: #9385da;
+}
+.hob:nth-child(3){
+    background-color: #36da95;
+}
+.hob:nth-child(4){
+    background-color: #4daeff;
+}
+.hob:nth-child(5){
+    background-color: #ff6380;
+}
+.hob:nth-child(6){
+    background-color: #9385da;
+}
+.hob:nth-child(7){
+    background-color: #36da95;
+}
+.hob:nth-child(8){
+    background-color: #4daeff;
+}
+.hob:nth-child(9){
+    background-color: #ff6380;
+}
+.hob:nth-child(10){
+    background-color: #9385da;
+}
+.hob:nth-child(11){
+    background-color: #36da95;
+}
+.hob:nth-child(12){
+    background-color: #4daeff;
+}
+.hob:nth-child(13){
+    background-color: #ff6380;
+}
+.hob:nth-child(14){
+    background-color: #9385da;
+}
+.hob:nth-child(15){
+    background-color: #36da95;
+}
+.hob:nth-child(16){
+    background-color: #4daeff;
+}
+.hob:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.hob-chosen{
+    filter: grayscale();
+}
+.proceed{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.proceed button{
+    cursor: pointer;
+    border-radius: var(--bradius);
+    border: none;
+    padding: 8px 14px;
+    background-color: var(--pink);
+    color: white;
+    width: 100px;
+    font-weight: 500;
+}
+
+/* -------------------------------HOBBIES CSS--------------------------------------- */
+
 @media (max-width: 430px){
     .right{
         display: none;
@@ -145,5 +277,31 @@ a{
     .signup-form{
         justify-content: center;
         width: 90vw;
+        box-shadow: 0;
+    }
+    .hobbies-container{
+        width: 100vw;
+    }
+}
+
+@media (max-width: 375px){
+    .right{
+        display: none;
+    }
+    .login-form{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        width: 90vw;
+    }
+    .signup-form{
+        justify-content: center;
+        width: 100vw;
+        height: fit-content;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .hobbies-container{
+        height: 100vh;
     }
 }

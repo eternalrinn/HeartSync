@@ -423,6 +423,7 @@ let showuserBan = function(){
     if (BanClicked){
         showBanUser.style.display = 'flex';
         showRemoveAct.style.display = 'none';
+        showViolate.style.display = 'none';
         BanClicked = false;
     }
     else{
@@ -440,6 +441,7 @@ let showactRemove = function(){
     if (ActClicked){
         showRemoveAct.style.display = 'flex';
         showBanUser.style.display = 'none';
+        showViolate.style.display = 'none';
         ActClicked = false;
     }
     else{
@@ -449,6 +451,45 @@ let showactRemove = function(){
 }
 
 //SHOWREMOVE 
+
+//SHOWSUSPEND 
+const showSuspend = document.querySelector('#popSuspend');
+let suspendClicked = true;
+
+let suspendShow = function(){
+    if (suspendClicked){
+        showSuspend.style.display = 'flex';
+        showBanUser.style.display = 'none';
+        showRemoveAct.style.display = 'none';
+        showViolate.style.display = 'none';
+        suspendClicked = false;
+    }
+    else{
+        showSuspend.style.display = 'none';
+        suspendClicked = true;
+    }
+}
+
+//SHOWSUSPEND 
+
+//SHOWVIOLATE 
+const showViolate = document.querySelector('#violation');
+let violateClicked = true;
+
+let violateShow = function(){
+    if (violateClicked){
+        showViolate.style.display = 'flex';
+        showBanUser.style.display = 'none';
+        showRemoveAct.style.display = 'none';
+        violateClicked = false;
+    }
+    else{
+        showViolate.style.display = 'none';
+        violateClicked = true;
+    }
+}
+
+//SHOWVIOLATE 
 
 //SHOWUPDATE 
 const showUpdate = document.querySelector('#popUpdate');
@@ -487,9 +528,87 @@ let showRevertPrompt = function(){
 //SHOWREVERT 
 
 
+//CHANGE EMAIL HIDER
+const showChangem = document.querySelector('#change-email');
+let emailClicked = true;
 
+let showChangeEmail = function(){
+    if (emailClicked){
+        showChangem.style.display = 'flex';
+        showPassChange.style.display = 'none';
+        emailClicked = false;
+    }
+    else{
+        showChangem.style.display = 'none';
+        emailClicked = true;
+    }
+}
+//CHANGE EMAIL HIDER
 
+//CHANGE EMAIL HIDER
+const showPassChange = document.querySelector('#change-password');
+let passClicked = true;
 
+let showChangePass = function(){
+    if (passClicked){
+        showPassChange.style.display = 'flex';
+        showChangem.style.display = 'none';
+        passClicked = false;
+    }
+    else{
+        showPassChange.style.display = 'none';
+        passClicked = true;
+    }
+}
+//CHANGE EMAIL HIDER
+
+//CHANGE DEACT HIDER
+const showDeact = document.querySelector('#deact-ac');
+let deactClicked = true;
+
+let showDeactAccount = function(){
+    if (deactClicked){
+        showDeact.style.display = 'flex';
+        showChangem.style.display = 'none';
+        showPassChange.style.display = 'none';
+        deactClicked = false;
+    }
+    else{
+        showDeact.style.display = 'none';
+        deactClicked = true;
+    }
+}
+//CHANGE DEACT HIDER
+
+//CHOOSE 
+document.addEventListener('DOMContentLoaded', () => {
+    const hobbies = document.querySelectorAll('.hob');
+    let chosenCount = 0;
+    let maxSelections = 5;
+
+    // Determine the maximum selections based on the page
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === 'personality2.html') {
+        maxSelections = 1;
+    }
+
+    hobbies.forEach(hobby => {
+        hobby.addEventListener('click', () => {
+            if (hobby.classList.contains('hob-chosen')) {
+                hobby.classList.remove('hob-chosen');
+                chosenCount--;
+            } else {
+                if (chosenCount < maxSelections) {
+                    hobby.classList.add('hob-chosen');
+                    chosenCount++;
+                } else {
+                    alert(`You can only select ${maxSelections}`);
+                }
+            }
+        });
+    });
+});
+//CHOOSE 
 
 
 
