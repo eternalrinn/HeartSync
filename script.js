@@ -398,6 +398,41 @@ let showRemove = function(){
 //SHOWREMOVE 
 
 
+//SHOWBIO 
+const showBio = document.querySelector('#popBio');
+let bioClicked = true;
+
+let showBioUser = function(){
+    if (bioClicked){
+        showBio.style.display = 'flex';
+        showeditProfile.style.display = 'none';
+        bioClicked = false;
+    }
+    else{
+        showBio.style.display = 'none';
+        bioClicked = true;
+    }
+}
+//SHOWBIO 
+
+//SHOWEDITPOFILE 
+const showeditProfile = document.querySelector('#popeditProfile');
+let editprofClicked = true;
+
+let showProfileEdit = function(){
+    if (editprofClicked){
+        showeditProfile.style.display = 'flex';
+        showBio.style.display = 'none';
+        editprofClicked = false;
+    }
+    else{
+        showeditProfile.style.display = 'none';
+        editprofClicked = true;
+    }
+}
+//SHOWEDITPOFILE 
+
+
 //SHOWVIEW 
 const showViewUser = document.querySelector('#popView');
 let viewClicked = true;
@@ -536,6 +571,9 @@ let showChangeEmail = function(){
     if (emailClicked){
         showChangem.style.display = 'flex';
         showPassChange.style.display = 'none';
+        showUsername.style.display = 'none';
+        showNickname.style.display = 'none';
+        showDeact.style.display = 'none';
         emailClicked = false;
     }
     else{
@@ -545,7 +583,7 @@ let showChangeEmail = function(){
 }
 //CHANGE EMAIL HIDER
 
-//CHANGE EMAIL HIDER
+//CHANGE PASS HIDER
 const showPassChange = document.querySelector('#change-password');
 let passClicked = true;
 
@@ -553,6 +591,10 @@ let showChangePass = function(){
     if (passClicked){
         showPassChange.style.display = 'flex';
         showChangem.style.display = 'none';
+        showUsername.style.display = 'none';
+        showNickname.style.display = 'none';
+        showDeact.style.display = 'none';
+        showsendCode.style.display = 'none';
         passClicked = false;
     }
     else{
@@ -560,7 +602,7 @@ let showChangePass = function(){
         passClicked = true;
     }
 }
-//CHANGE EMAIL HIDER
+//CHANGE PASS HIDER
 
 //CHANGE DEACT HIDER
 const showDeact = document.querySelector('#deact-ac');
@@ -569,8 +611,11 @@ let deactClicked = true;
 let showDeactAccount = function(){
     if (deactClicked){
         showDeact.style.display = 'flex';
+        showUsername.style.display = 'none';
+        showNickname.style.display = 'none';
         showChangem.style.display = 'none';
         showPassChange.style.display = 'none';
+        showsendCode.style.display = 'none';
         deactClicked = false;
     }
     else{
@@ -579,6 +624,90 @@ let showDeactAccount = function(){
     }
 }
 //CHANGE DEACT HIDER
+
+//CHANGE USERNAME HIDER
+const showUsername = document.querySelector('#change-username');
+let cusernameClicked = true;
+
+let showeditUsername = function(){
+    if (cusernameClicked){
+        showUsername.style.display = 'flex';
+        showNickname.style.display = 'none';
+        showDeact.style.display = 'none';
+        showChangem.style.display = 'none';
+        showPassChange.style.display = 'none';
+        showsendCode.style.display = 'none';
+        cusernameClicked = false;
+    }
+    else{
+        showUsername.style.display = 'none';
+        cusernameClicked = true;
+    }
+}
+//CHANGE USERNAME HIDER
+
+//CHANGE USERNAME HIDER
+const showNickname = document.querySelector('#change-nickname');
+let cnicknameClicked = true;
+
+let showeditNickname = function(){
+    if (cnicknameClicked){
+        showNickname.style.display = 'flex';
+        showUsername.style.display = 'none';
+        showDeact.style.display = 'none';
+        showChangem.style.display = 'none';
+        showPassChange.style.display = 'none';
+        showsendCode.style.display = 'none';
+        cnicknameClicked = false;
+    }
+    else{
+        showNickname.style.display = 'none';
+        cnicknameClicked = true;
+    }
+}
+//CHANGE USERNAME HIDER
+
+//CHANGE BDAY HIDER
+const showBday = document.querySelector('#change-bday');
+let cbdayClicked = true;
+
+let showeditBday = function(){
+    if (cbdayClicked){
+        showBday.style.display = 'flex';
+        showUsername.style.display = 'none';
+        showNickname.style.display = 'none';
+        showDeact.style.display = 'none';
+        showChangem.style.display = 'none';
+        showPassChange.style.display = 'none';
+        showsendCode.style.display = 'none';
+        cbdayClicked = false;
+    }
+    else{
+        showBday.style.display = 'none';
+        cbdayClicked = true;
+    }
+}
+//CHANGE BDAY HIDER
+
+//CHANGE SENDCODE HIDER
+const showsendCode = document.querySelector('#change-code');
+let ccodeClicked = true;
+
+let showSendCode = function(){
+    if (ccodeClicked){
+        showsendCode.style.display = 'flex';
+        showUsername.style.display = 'none';
+        showNickname.style.display = 'none';
+        showDeact.style.display = 'none';
+        showPassChange.style.display = 'none';
+        ccodeClicked = false;
+    }
+    else{
+        showsendCode.style.display = 'none';
+        ccodeClicked = true;
+    }
+}
+//CHANGE SENDCODE HIDER
 
 //CHOOSE 
 document.addEventListener('DOMContentLoaded', () => {
@@ -610,10 +739,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 //CHOOSE 
 
+//EDITPROFILE
+ document.addEventListener('DOMContentLoaded', function() {
+    const chooseButtons = document.querySelectorAll('.stats-container.choose .stats');
+
+    chooseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.classList.toggle('stats-chose');
+        });
+    });
 
 
+    const removeButtons = document.querySelectorAll('.stats-container.remove .stats');
 
-
+    removeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    });
+});
+//EDITPROFILE
 
 // Function to enable dark mode
 function enableDarkMode() {

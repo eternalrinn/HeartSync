@@ -554,12 +554,12 @@ body{
 /* RIGHT SIDEBAR */
 .right-sidebar{
     z-index: 300;
-    position: sticky;
+    position: fixed;
     right: 0;
     top: 0;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     height: 100vh;
 }
 .right-sidebar , .friend p{
@@ -760,6 +760,9 @@ body{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+.bio-container .stats-container{
+    flex-wrap: wrap;
 }
 .stats-container a{
     text-decoration: none;
@@ -1987,7 +1990,7 @@ body{
     display: grid;
     grid-template-columns: 15% 85%;
 }
-.popup, .popView, .popBan, .popRemove, .popUpdate, .popRevert, .popSuspend{
+.popup, .popView, .popBan, .popRemove, .popUpdate, .popRevert, .popSuspend, .popBio, .popeditProfile{
     padding: 20px;
     border-radius: var(--bradius);
     position: fixed;
@@ -2002,21 +2005,70 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
 .popup h1, 
 .popView h1, 
 .popBan h1, 
 .popRemove h1, 
 .popUpdate h1,
 .popRevert h1,
-.popSuspend h1{
+.popSuspend h1,
+.popBio h1,
+.popeditProfile h1{
     font-weight: 500;
     color: var(--persistentblack);
     font-size: 1rem;
     width: 100%;
 }
+.popSuspend select{
+    background-color: var(--persistentwhite);
+    color: var(--persistentblack);
+}
 .popSuspend{
     gap: 1rem;
+}
+.popBio input{
+    padding-bottom: 150px;
+    width: 300px;
+}
+.stats-gone{
+    display: none;
+}
+.popeditProfile .stats-container{
+    width: 375px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.popeditProfile .stats-container .stats{
+    background-color: var(--white);
+}
+.popeditProfile .stats-container .stats-chose{
+    background-color: var(--pink);
+}
+.popeditProfile .current-hobbies{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.upload-container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: var(--darkgray);
+    width: 150px;
+    padding: 20px;
+    border-radius: var(--bradius);
+    height: 100px;
+}
+.upload-container i, .upload-container p{
+    border-radius: var(--bradius);
+    color: var(--persistentwhite);
+}
+.popeditProfile .new form .upload-container{
+    background-color: var(--lightblue);
+}
+.popBio .new input{
+    color: var(--white);
 }
 .yes{
     cursor: pointer;
@@ -2039,6 +2091,8 @@ body{
 .dashboard{
     display: flex;
     flex-wrap: wrap;
+    overflow-x: hidden;
+    margin-bottom: 100px;
 }
 .statistics{
     display: flex;
@@ -2427,7 +2481,7 @@ select{
     flex-direction: column;
     gap: 2rem;
     width: 80%;
-    margin-bottom: 100p;
+    margin-bottom: 100px;
 }
 .userbut, .passbut{
     display: flex;
@@ -2464,7 +2518,7 @@ select{
 .userbut p, .passbut p{
     color: var(--medgray);
 }
-.change-email, .change-password, .deact-ac{
+.change-email, .change-password, .deact-ac, .change-username, .change-nickname, .change-contact, .change-bday, .change-code{
     position: absolute;
     display: none;
     flex-direction: column;
@@ -2476,6 +2530,12 @@ select{
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.change-code{
+    z-index: 100;
+}
+.change-username p{
+    color: var(--persistentwhite);
 }
 .changem-title h1{
     font-weight: 600;
@@ -2503,7 +2563,7 @@ select{
     cursor: pointer ;
     border-radius: var(--bradius);
     border: none;
-    color: var(--white);
+    color: var(--persistentwhite);
     font-weight: 500;
     padding: 8px 14px;
     background-color: var(--pink);
@@ -2600,13 +2660,10 @@ select{
     color: var(--persistentwhite);
 }
 /* -------------------------------SETTINGS CSS--------------------------------------- */
-@media (max-width:1520px) {
-    .sidebar{
-        min-width: 250px;
-    }
-}
 
-@media (max-width:1470px) {
+
+/* TABLET MEDIA QUERY */
+@media (max-width: 1366px) {
     .profile{
         padding: 10px;
     }
@@ -2644,18 +2701,11 @@ select{
     .sidebar{
         width: 30%;
     }
-    .mobile-prompt h1{
-        color: var(--persistentwhite);
-    }
-}
-
-/* TABLET MEDIA QUERY */
-@media (max-width: 1366px) {
     .right-sidebar{
         display: none;
     }
     .middle{
-        width: 100%;
+        width: 80%;
     }
     .chat-sidebar{
         width: 100%;
@@ -2692,7 +2742,16 @@ select{
 
 /* MOBILE  MEDIA QUERY */
 
-@media (max-width: 430px){
+@media (max-width: 933px){
+.popeditProfile{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+.popeditProfile{
+    height: 100vh;
+}
 .violation{
     width: 100vw;
 }
@@ -2735,21 +2794,25 @@ select{
     transform: translate(-50%);
     bottom: 0;
     width: 100%;
-    padding-top: 10px;
+    background-color: var(--white);
 }
 
 .bottom-navigations{
     margin: 0;
-    padding: 0 30px 0 30px;
-    display: flex;
-    gap: 1.2rem;
+    display: grid;
     background-color: var(--white);
-    flex-direction: row;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100vw;
+    justify-content: space-between;
 }
 .nav-profile img{
     width: 35px;
     border-radius: 50%;
     border: 2px solid var(--pink);
+}
+.bottom-navigations a{
+    display: flex;
+    justify-content: center;
 }
 .bottom-navigations a:hover,  .active-bnav{
     background-color: var(--lightblue);
@@ -2963,8 +3026,6 @@ font-size: 50px;
 }
 .dashboard{
     width: 100vw;
-    overflow-x: hidden;
-    margin-bottom: 100px;
 }
 .statistics, .leaderboards{
     margin: 0;
@@ -3084,12 +3145,18 @@ font-size: 50px;
     .names-container p{
         font-size: 1rem;
     }
+    .popeditProfile{
+        width: fit-content;
+    }
 }
 /*IPHONE 12 SCREEN MOBILE */
 
 
 /* SMALLER SCREEN MOBILE [IPHONE SE]  NAVBAR */
 @media (max-width: 375px) {
+    .popeditProfile{
+        position: absolute;
+    }
     .stories{
         height: 145px;
     }
