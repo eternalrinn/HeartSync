@@ -9,6 +9,36 @@
     <link rel="icon" href="../Assets/logo.png">
 </head>
 <body>
+    <div class="switch-acc" id="switching">
+        <div class="destroyer" onclick="showswitchACc()"></div>
+        <div class="accssw">
+            <a href="../User HTML/home.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../Assets/profile.jpg">
+                        <h1>Gehlee Dangca</h1>
+                    </div>
+                    <i class="fa-solid fa-repeat not-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../Admin HTML/admin.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../AdminAssets/Icons/icon2.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <i class="fa-solid fa-circle-check active-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../index.html">
+                <div class="sw3">
+                    <h1><i class="fa-solid fa-plus"></i>Add new account</h1>
+                </div>
+            </a>
+        </div>
+    </div>
     <main class="profile-main">
         <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
 
@@ -44,8 +74,8 @@
                     </div>
                 </div>
                 
-                <a href="adminprofile.html" class="active-nav">
-                    <div class="profile">
+                <a href="adminprofile.html">
+                    <div class="profile active-nav">
                         <img src="../AdminAssets/Icons/icon2.png">
                         <div class="names">
                             <h4>Gehlee</h4>
@@ -79,12 +109,10 @@
                             <p>Settings</p>
                         </div>
                     </a>
-                    <a href="">
-                        <div class="menu-option">
+                        <div onclick="showswitchACc()" class="menu-option">
                             <i class="fa-solid fa-user"></i>
                             <p>Switch accounts</p>
                         </div>
-                    </a>
                     <a href="../index.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-right-from-bracket"></i>
@@ -95,6 +123,54 @@
                 <a href="javascript:void(0);" class="main-menu" onclick="showMenuBar()"><i class="fa-solid fa-bars"></i><p>Menu</p></a>
             </div>
         </div>
+
+        <div class="popeditProfile" id="popeditProfile">
+            <div class="new">
+                <h1>Change profile</h1>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" id="fileInput" name="file" style="display: none;" onchange="fileSelected()">
+                    <div class="upload-container" onclick="document.getElementById('fileInput').click();">
+                        <i class="fa-solid fa-camera"></i>
+                        <p>Choose profile photo</p>
+                    </div>
+                </form>
+                <hr>
+                <h1>Edit hobbies</h1>
+                <div class="edit-hobbies">
+                    <div class="current-hobbies">
+                        <h1>Current hobbies</h1>
+                        <div class="stats-container remove">
+                            <a href="#"><button class="stats">Dancing</button></a>
+                            <a href="#"><button class="stats">Playing Video Games</button></a>
+                            <a href="#"><button class="stats">Watching K-Drama</button></a> 
+                        </div>
+                    <hr>
+                        <h1>Choose new hobbies</h1>
+                        <div class="stats-container choose">
+                            <a href="#"><button class="stats">Dancing</button></a>
+                            <a href="#"><button class="stats">Playing Video Games</button></a>
+                            <a href="#"><button class="stats">Singing</button></a> 
+                            <a href="#"><button class="stats">Listening to music</button></a> 
+                            <a href="#"><button class="stats">Writing</button></a> 
+                            <a href="#"><button class="stats">Playing instrument</button></a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="editprof-button">
+                    <button onclick="showProfileEdit()">Cancel</button>
+                    <button onclick="showProfileEdit()">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popBio" id="popBio">
+            <div class="new">
+                <h1>Edit account bio</h1>
+                <input type="text" placeholder="Type your bio">
+                <button onclick="showBioUser()">Confirm</button>
+            </div>
+        </div>
+
         <div class="profile-container">
             <div class="profile-head">
                 <div class="profile-infos">
@@ -106,7 +182,10 @@
                             <h1>Gehlee</h1>
                             <p>@Goddess</p>
                         </div>
-                        <a href="../index.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                        <div class="out">
+                            <a onclick="showswitchACc()" href="javascript:void(0)" class="logout"><i class="fa-solid fa-repeat"></i></a>
+                            <a href="../index.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                        </div>
                     </div>
                 </div>
 
@@ -115,16 +194,15 @@
                             <a href="#"><button class="stats">16 Post</button></a>
                             <a href="#"><button class="stats">999,999 Followers</button></a>
                             <a href="#"><button class="stats">1 Following</button></a>
-                            <a href="#"><button class="rankings"><i class="fa-solid fa-crown"></i>#1</button></a>
                     </div>
                 </div>
             </div>
 
             <div class="bio-container">
                 <div class="bio-button">
-                    <a href="#"><button>Edit Bio</button></a>
+                    <button onclick="showBioUser()">Edit Bio</button>
                     <div class="profile-settings">
-                        <a href="#"><button class="edit-profile">Edit Profile</button></a>
+                       <button onclick="showProfileEdit()" class="edit-profile">Edit Profile</button>
                         <a href="adminsettings.html"><i class="fa-solid fa-gear"></i></a>
                         <a href="adminpanel.html"><i class="fa-solid fa-screwdriver-wrench"></i></a>
                     </div>
@@ -134,6 +212,11 @@
                     ✅U&IS Member✅<br>
                     🔒03-27-24🗝️<br>
                     🔍XD Sa Etivac lang pala makikita ang da one XD🔍</p>
+                    <div class="stats-container">
+                        <a href="#"><button class="stats">Dancing</button></a>
+                        <a href="#"><button class="stats">Playing Video Games</button></a>
+                        <a href="#"><button class="stats">Watching K-Drama</button></a> 
+                </div>
             </div>
             <div class="featured-post">
                 <div class="featured">

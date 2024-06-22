@@ -9,6 +9,36 @@
     <link rel="icon" href="../Assets/logo.png">
 </head>
 <body>
+    <div class="switch-acc" id="switching">
+        <div class="destroyer" onclick="showswitchACc()"></div>
+        <div class="accssw">
+            <a href="../User HTML/home.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../Assets/profile.jpg">
+                        <h1>Gehlee Dangca</h1>
+                    </div>
+                    <i class="fa-solid fa-repeat not-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../Admin HTML/admin.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../AdminAssets/Icons/icon2.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <i class="fa-solid fa-circle-check active-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../index.html">
+                <div class="sw3">
+                    <h1><i class="fa-solid fa-plus"></i>Add new account</h1>
+                </div>
+            </a>
+        </div>
+    </div>
     <main class="settings-main">
         <div class="sidebar">
             <nav class="sidenav">
@@ -57,12 +87,10 @@
                             <p>Settings</p>
                         </div>
                     </a>
-                    <a href="">
-                        <div class="menu-option">
+                        <div onclick="showswitchACc()" class="menu-option">
                             <i class="fa-solid fa-user"></i>
                             <p>Switch accounts</p>
                         </div>
-                    </a>
                     <a href="../index.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-right-from-bracket"></i>
@@ -94,6 +122,58 @@
     </nav>
 </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+<div class="change-code" id="change-code">
+    <div class="changem-title">
+        <div class="new">
+            <h1>Succesfully sent code</h1>
+            <button onclick="showSendCode()" >Ok</button>
+        </div>
+    </div>
+</div>
+<div class="change-bday" id="change-bday">
+    <div class="changem-title">
+        <h1>Account Settings</h1>
+    </div>
+    <div class="new">   
+        <h2>Change your birthdate</h2>
+        <input type="date">
+    </div>
+    <div class="new">   
+        <h2>Enter password</h2>
+        <input type="password">
+        <button onclick="showeditBday()" >Submit</button>
+    </div>
+</div>
+<div class="change-nickname" id="change-nickname">
+    <div class="changem-title">
+        <h1>Account Settings</h1>
+        <p>You can only change your nickname every 7 days</p>
+    </div>
+    <div class="new">   
+        <h2>Enter new nickname</h2>
+        <input type="text">
+    </div>
+    <div class="new">
+        <h2>Enter password</h2>
+        <input type="password">
+        <button onclick="showeditNickname()" >Submit</button>
+    </div>
+</div>
+<div class="change-username" id="change-username">
+    <div class="changem-title">
+        <h1>Account Settings</h1>
+        <p>Username must be unique, you can only change username every 30 days</p>
+    </div>
+    <div class="new">   
+        <h2>Enter new username</h2>
+        <input type="text">
+    </div>
+    <div class="new">
+        <h2>Enter password</h2>
+        <input type="password">
+        <button onclick="showeditUsername()" >Submit</button>
+    </div>
+</div>
 <div class="deact-ac" id="deact-ac">
     <div class="changem-title">
         <h1>Account Settings</h1>
@@ -133,8 +213,9 @@
                 <input type="text">
             </div>
             <div class="new">
-                <h2>Send Code</h2>
+                <h2>Verification Code</h2>
                 <input type="text">
+                <button onclick="showSendCode()">Send Code</button>
                 <button onclick="showChangeEmail()" >Submit</button>
             </div>
         </div>
@@ -166,10 +247,12 @@
                     </div>
                 </div>
                 <div class="settings-nav">
-                    <a href="">General</a>
-                    <a href="">Privacy</a>
-                    <a href="">Themes</a>
-                    <a href="">Account</a>
+                    <a href="#personal-information">General</a>
+                    <a href="#notification">Notifications</a>
+                    <a href="#language">Language</a>
+                    <a href="#privacy">Privacy</a>
+                    <a href="#themee">Themes</a>
+                    <a href="#account-settings">Account</a>
                 </div>
             </div>
             <div class="settings-content">
@@ -178,27 +261,27 @@
                         <h1>General</h1>
                     </div>
                     <div class="general-content">
-                        <div class="personal-informations">
+                        <div class="personal-informations" id="personal-information">
                             <div class="personal-container">
                                 <div class="personal-det">
                                     <h2>Personal details</h2>
                                     <p>Your personal information is only visible to people you follow.</p>
                                 </div>
-                                <div class="pers">
+                                <div class="pers" onclick="showeditUsername()">
                                     <div class="pers-left">
                                         <h3>Username</h3>
                                         <p>Gehlee</p>
                                     </div>
                                     <i class="fa-solid fa-pen"></i>
                                 </div>
-                                <div class="pers">
+                                <div class="pers" onclick="showeditNickname()">
                                     <div class="pers-left">
-                                        <h3>Contact info</h3>
-                                        <p>eternalrinn@0987@gmail.com</p>
+                                        <h3>Nickname</h3>
+                                        <p>Goddess</p>
                                     </div>
                                     <i class="fa-solid fa-pen"></i>
                                 </div>
-                                <div class="pers">
+                                <div class="pers" onclick="showeditBday()">
                                     <div class="pers-left">
                                         <h3>Birthday</h3>
                                         <p>August 19, 2007</p>
@@ -207,7 +290,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <div class="general-notifications">
+                            <div class="general-notifications" id="notification">
                                 <div class="notif-title">
                                     <h2>Notifications</h2>
                                     <p>Modify notification settings</p>
@@ -232,7 +315,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <div class="language">
+                            <div class="language" id="language">
                                 <div class="language-title">
                                     <h2>Language</h2>
                                     <p>Choose your prefer language</p>
@@ -253,7 +336,7 @@
                     </div>
                 </div>
 
-                <div class="privacy">
+                <div class="privacy" id="privacy">
                     <div class="privacy-title">
                         <h1>Privacy</h1>
                         <p>What is the Privacy Policy and what does it cover?</p>
@@ -298,7 +381,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="themes">
+                <div class="themes" id="themee">
                     <div class="theme-title">
                         <h1>Themes</h1>
                         <p>Change the theme to your style!</p>
@@ -323,7 +406,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="account-settings">
+                <div class="account-settings" id="account-settings">
                     <div class="acc-title">
                         <h1>Account Settings</h1>
                         <p>Update your account security.</p>

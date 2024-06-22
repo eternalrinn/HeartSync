@@ -9,6 +9,36 @@
     <link rel="icon" href="../Assets/logo.png">
 </head>
 <body>
+    <div class="switch-acc" id="switching">
+        <div class="destroyer" onclick="showswitchACc()"></div>
+        <div class="accssw">
+            <a href="../User HTML/home.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../Assets/profile.jpg">
+                        <h1>Gehlee Dangca</h1>
+                    </div>
+                    <i class="fa-solid fa-repeat not-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../Admin HTML/admin.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../AdminAssets/Icons/icon2.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <i class="fa-solid fa-circle-check active-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../index.html">
+                <div class="sw3">
+                    <h1><i class="fa-solid fa-plus"></i>Add new account</h1>
+                </div>
+            </a>
+        </div>
+    </div>
     <main class="admin-main">
         <div class="sidebar">
             <nav class="sidenav">
@@ -57,12 +87,10 @@
                             <p>Settings</p>
                         </div>
                     </a>
-                    <a href="">
-                        <div class="menu-option">
+                        <div onclick="showswitchACc()" class="menu-option">
                             <i class="fa-solid fa-user"></i>
                             <p>Switch accounts</p>
                         </div>
-                    </a>
                     <a href="../index.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-right-from-bracket"></i>
@@ -93,6 +121,21 @@
     </nav>
 </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+<div class="popUpdateUI" id="popUpdateUI">
+    <div class="updateButton">
+        <h1>About update <span>v3.1 Beta</span></h1>
+        <div class="new">
+            <p>1. Fix some terrible bugs</p>
+            <p>2. Find your perfect match via Find Match!</p>
+            <p>3. Improve loading experience </p>
+            <p>4. Supported Ipad pro devices</p>
+        </div>
+        <div class="new">
+            <button onclick="showRevertPrompt()">Revert Update</button>
+            <button onclick="showUpdatePrompt()">Push Update</button>
+        </div>
+    </div>
+</div>
 <div class="popUpdate" id="popUpdate">
     <h1>Do you want to push update?</h1>
     <div class="pop-op">
@@ -125,8 +168,9 @@
                 <p>2024-06-19</p>
                 <p>Bug fixes and QOL updates</p>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
-                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
+                    <div class="new">
+                        <button onclick="showLogs()">Update details</button>
+                    </div>
                 </div>
             </div>
             <div class="rank">
@@ -134,8 +178,9 @@
                 <p>2024-06-19</p>
                 <p>Global Chat Release</p>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
-                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
+                    <div class="new">
+                        <button onclick="showLogs()">Update details</button>
+                    </div>
                 </div>
             </div>
             <div class="rank">
@@ -143,8 +188,9 @@
                 <p>2024-06-19</p>
                 <p>Find Match Added!</p>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
-                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
+                    <div class="new">
+                        <button onclick="showLogs()">Update details</button>
+                    </div>
                 </div>
             </div>
             <div class="rank">
@@ -152,8 +198,9 @@
                 <p>2024-06-19</p>
                 <p>Bug fixes and QOL updates</p>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
-                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
+                    <div class="new">
+                        <button onclick="showLogs()">Update details</button>
+                    </div>
                 </div>
             </div>
             <div class="rank">
@@ -161,8 +208,9 @@
                 <p>2024-06-19</p>
                 <p>HeartSync Release!</p>
                 <div class="update-buts">
-                    <i class="fa-solid fa-circle revert-up" onclick="showRevertPrompt()"></i>
-                    <i class="fa-solid fa-circle push-up" onclick="showUpdatePrompt()"></i>
+                    <div class="new">
+                        <button onclick="showLogs()">Update details</button>
+                    </div>
                 </div>
             </div>
         </div>

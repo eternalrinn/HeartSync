@@ -9,6 +9,36 @@
     <link rel="icon" href="../Assets/logo.png">
 </head>
 <body>
+    <div class="switch-acc" id="switching">
+        <div class="destroyer" onclick="showswitchACc()"></div>
+        <div class="accssw">
+            <a href="../User HTML/home.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../Assets/profile.jpg">
+                        <h1>Gehlee Dangca</h1>
+                    </div>
+                    <i class="fa-solid fa-circle-check active-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../Admin HTML/admin.html">
+                <div class="sw">
+                    <div class="sw-img">
+                        <img src="../AdminAssets/Icons/icon2.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <i class="fa-solid fa-repeat not-switch"></i>
+                </div>
+            </a>
+            <hr>
+            <a href="../index.html">
+                <div class="sw3">
+                    <h1><i class="fa-solid fa-plus"></i>Add new account</h1>
+                </div>
+            </a>
+        </div>
+    </div>
     <main class="videos-main">
         <div class="sidebar">
             <nav class="sidenav">
@@ -50,12 +80,10 @@
                             <p>Settings</p>
                         </div>
                     </a>
-                    <a href="">
-                        <div class="menu-option">
-                            <i class="fa-solid fa-user"></i>
-                            <p>Switch accounts</p>
-                        </div>
-                    </a>
+                    <div onclick="showswitchACc()" class="menu-option">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Switch accounts</p>
+                    </div>
                     <a href="../index.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-right-from-bracket"></i>
