@@ -754,7 +754,7 @@ body{
 }
 .profile-main{
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 15% 85%;
 }
 .stats-container .rankings{
     display: flex;
@@ -780,9 +780,10 @@ body{
     border-radius: var(--bradius);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 20px auto 20px auto;
     background-color: var(--white);
-    width: 60vw;
+    width: 90%;
 }
 .logout{
     display: none;
@@ -1011,8 +1012,8 @@ body{
 .chat-container{
     display: flex;
     margin: auto;
-    width: 80%;
-    height: 90vh;
+    width: 95%;
+    height: 95vh;
     background-color: var(--white);
 }
 .chat-sidebar{
@@ -1056,9 +1057,8 @@ body{
 }
 .chats-selector{
     display: flex;
-    justify-content: center;
-    padding: 0 30px 20px 30px;
-    gap: 2rem;
+    justify-content: space-around;
+    flex-grow: 1;
 }
 .messages{
     display: flex;
@@ -1980,6 +1980,9 @@ body{
     gap: 1rem;
     padding: 20px;
 }
+.menu-option i, .menu-option p{
+    color: var(--persistentwhite);
+}
 .menu-bar a{
     font-size: 1rem;
 }
@@ -1990,7 +1993,7 @@ body{
     display: grid;
     grid-template-columns: 15% 85%;
 }
-.popup, .popView, .popBan, .popRemove, .popUpdate, .popRevert, .popSuspend, .popBio, .popeditProfile{
+.popup, .popView, .popBan, .popRemove, .popUpdate, .popRevert, .popSuspend, .popBio, .popeditProfile, .popUpdateUI{
     padding: 20px;
     border-radius: var(--bradius);
     position: fixed;
@@ -2004,6 +2007,21 @@ body{
     background-color: var(--persistentwhite);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+.activities-main{
+    display: grid;
+    grid-template-columns: 15% 80%;
+}
+.popUpdateUI span{
+    color: var(--darkgray);
+}
+.popUpdateUI p{
+    text-align: left;
+}
+.updateButton{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .popup h1, 
 .popView h1, 
@@ -2013,7 +2031,8 @@ body{
 .popRevert h1,
 .popSuspend h1,
 .popBio h1,
-.popeditProfile h1{
+.popeditProfile h1,
+.popUpdateUI{
     font-weight: 500;
     color: var(--persistentblack);
     font-size: 1rem;
@@ -2542,6 +2561,9 @@ select{
     font-size: 1.2rem;
     color: var(--black);
 }
+.changem-title p{
+    color: var(--persistentwhite);
+}
 .new{
     display: flex;
     flex-direction: column;
@@ -2659,13 +2681,95 @@ select{
     background-color: var(--pink);
     color: var(--persistentwhite);
 }
+.sw img{
+    gap: 0.5rem;
+    width: 40px;
+    border-radius: 50%;
+}
+.sw-img{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.sw-img h1{
+    color: var(--persistentwhite);
+    font-weight: 500;
+    font-size: 1rem;
+}
+.accssw{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sw{
+    padding: 15px;
+    border-radius: var(--bradius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.active-switch{
+    color: var(--pink);
+}
+.sw:hover, .sw3:hover{
+    background-color: var(--lightblue);
+}
+.sw3{
+    cursor: pointer;
+    border-radius: var(--bradius);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.sw3 h1{
+    font-weight: 600;
+    color: var(--persistentwhite);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.switch-acc{
+    z-index: 1000;
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    border-radius: var(--bradius);
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.switch-acc a{
+    color: var(--persistentwhite);
+    text-decoration: none;
+}
+.not-switch{
+    color: var(--persistentwhite);
+}
+.destroyer{
+    z-index: -500;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+}
+.out{
+    display: flex;
+    gap: 0.5rem;
+}
 /* -------------------------------SETTINGS CSS--------------------------------------- */
 
 
 /* TABLET MEDIA QUERY */
 @media (max-width: 1366px) {
     .profile{
-        padding: 10px;
+        padding: 10px 0 10px 10px;
     }
     .message-main .sidebar{
         min-width: 76px;
@@ -2705,7 +2809,7 @@ select{
         display: none;
     }
     .middle{
-        width: 80%;
+        width: 100%;
     }
     .chat-sidebar{
         width: 100%;

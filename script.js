@@ -538,6 +538,7 @@ let showUpdatePrompt = function(){
     }
     else{
         showUpdate.style.display = 'none';
+        showUpdateLogs.style.display = 'none';
         UpdClicked = true;
     }
 }
@@ -556,6 +557,7 @@ let showRevertPrompt = function(){
     }
     else{
         showRevert.style.display = 'none';
+        showUpdateLogs.style.display = 'none';
         revClicked = true;
     }
 }
@@ -708,6 +710,40 @@ let showSendCode = function(){
     }
 }
 //CHANGE SENDCODE HIDER
+
+//CHANGE UPDATE HIDER
+const showUpdateLogs = document.querySelector('#popUpdateUI');
+let cupdateClicked = true;
+
+let showLogs = function(){
+    if (cupdateClicked){
+        showUpdateLogs.style.display = 'flex';
+        cupdateClicked = false;
+    }
+    else{
+        showUpdateLogs.style.display = 'none';
+        cupdateClicked = true;
+    }
+}
+//CHANGE UPDATE HIDER
+
+
+//CHANGE SWITCH HIDER
+const showSwitch = document.querySelector('#switching');
+let cswitchClicked = true;
+
+let showswitchACc = function(){
+    if (cswitchClicked){
+        showSwitch.style.display = 'block';
+        cswitchClicked = false;
+    }
+    else{
+        showSwitch.style.display = 'none';
+        cswitchClicked = true;
+    }
+    
+}
+//CHANGE SWITCH HIDER
 
 //CHOOSE 
 document.addEventListener('DOMContentLoaded', () => {
