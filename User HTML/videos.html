@@ -9,6 +9,61 @@
     <link rel="icon" href="../Assets/logo.png">
 </head>
 <body>
+    <div class="clickshare" id="clickshare">
+        <h1 class="clicktitles">Share</h1>
+        <div class="share-container">
+            <div class="share-head">
+                <div class="sharer-img">
+                    <img src="../AdminAssets/Icons/icon2.png">
+                    <h1>Gehl</h1>
+                </div>
+                <select selected="Public">
+                    <option>Public</option>
+                    <option>Followers</option>
+                </select>
+            </div>
+            <div class="share-input">
+                <input type="text" placeholder="Say something">
+                <div class="sharinnbuts">
+                    <button onclick="showShared()">Cancel</button>
+                    <button onclick="showShared()">Share now</button>
+                </div>
+            </div>
+            <div class="share-friends">
+                <h1 class="clicktitles">Share to friends</h1>
+                <div class="sharing-container">
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon1.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon3.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon4.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon5.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon6.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon7.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon8.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="switch-acc" id="switching">
         <div class="destroyer" onclick="showswitchACc()"></div>
         <div class="accssw">
@@ -96,7 +151,7 @@
         </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
 
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <nav class="bottomnav">
                 <div class="navigations bottom-navigations">
                         <a href="home.html"><i class="fa-solid fa-house"></i></a>
@@ -129,7 +184,7 @@
                         <div class="reactions">
                             <i class="fa-regular fa-heart"></i>
                             <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-share-from-square"></i>
+                            <i onclick="showShared()" class="fa-regular fa-share-from-square"></i>
                             <i class="fa-regular fa-bookmark"></i>
                         </div>
                         <button>Follow</button>
@@ -175,7 +230,7 @@
                         <div class="reactions">
                             <i class="fa-regular fa-heart"></i>
                             <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-share-from-square"></i>
+                            <i onclick="showShared()" class="fa-regular fa-share-from-square"></i>
                             <i class="fa-regular fa-bookmark"></i>
                         </div>
                         <button>Follow</button>
@@ -221,7 +276,7 @@
                         <div class="reactions">
                             <i class="fa-regular fa-heart"></i>
                             <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-share-from-square"></i>
+                            <i onclick="showShared()" class="fa-regular fa-share-from-square"></i>
                             <i class="fa-regular fa-bookmark"></i>
                         </div>
                         <button>Follow</button>
@@ -256,7 +311,7 @@
                            <!-- -----------------------ADD MORE FRIENDS--------------------------- -->
                            <div class="addfriends">
                             <div class="addtitle-container">
-                                <a href="findmatch.html"><button>Find your Match</button></a>
+                                <a href="start-match.html"><button>Find your Match</button></a>
                             </div>
                             <div class="addfriends-slider">
                                 <div class="addfriendscard-container">

@@ -9,6 +9,61 @@
     <link rel="icon" href="../Assets/logo.png">
 </head>
 <body>
+    <div class="clickshare" id="clickshare">
+        <h1 class="clicktitles">Share</h1>
+        <div class="share-container">
+            <div class="share-head">
+                <div class="sharer-img">
+                    <img src="../AdminAssets/Icons/icon2.png">
+                    <h1>Gehl</h1>
+                </div>
+                <select selected="Public">
+                    <option>Public</option>
+                    <option>Followers</option>
+                </select>
+            </div>
+            <div class="share-input">
+                <input type="text" placeholder="Say something">
+                <div class="sharinnbuts">
+                    <button onclick="showShared()">Cancel</button>
+                    <button onclick="showShared()">Share now</button>
+                </div>
+            </div>
+            <div class="share-friends">
+                <h1 class="clicktitles">Share to friends</h1>
+                <div class="sharing-container">
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon1.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon3.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon4.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon5.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon6.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon7.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                    <div class="share1">
+                        <img src="../AdminAssets/Icons/icon8.png">
+                        <h1>Gehlee</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="switch-acc" id="switching">
         <div class="destroyer" onclick="showswitchACc()"></div>
         <div class="accssw">
@@ -75,13 +130,7 @@
             </nav>
             
             <div class="menu">
-                <div class="menu-bar" id="menu-bar">
-                    <a href="adminpanel.html">
-                        <div class="menu-option">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <p>Admin</p>
-                        </div>
-                    </a>
+                <div class="menu-bar user-menu" id="menu-bar">
                     <a href="adminsettings.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-gear"></i>
@@ -104,7 +153,7 @@
         </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
 
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <nav class="bottomnav">
                 <div class="navigations bottom-navigations">
                         <a href="admin.html" class="active-bnav"><i class="fa-solid fa-house"></i></a>
@@ -126,6 +175,16 @@
         <section class="middle">
             <div class="posts">
                 <div class="stories-slider">
+                    <div class="mobile-search">
+                        <div class="msearch-logo">
+                            <img src="../Assets/logo.png">
+                            <h1>Heart<span>Sync</span></h1>
+                        </div>
+                        <div class="msearch-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search">    
+                        </div>
+                    </div>
                     <div class="stories">
                         <div class="story-container">
                             <a href="adminstories.html#create-story">
@@ -300,7 +359,7 @@
                                 <i class="fa-regular fa-comment"></i>
                                 <p>Comment</p>
                             </div>
-                            <div class="reacts">
+                            <div class="reacts" onclick="showShared()">
                                 <i class="fa-regular fa-share-from-square"></i>
                                 <p>Share</p>
                             </div>
@@ -355,7 +414,7 @@
                             <i class="fa-regular fa-comment"></i>
                             <p>Comment</p>
                         </div>
-                        <div class="reacts">
+                        <div class="reacts" onclick="showShared()">
                             <i class="fa-regular fa-share-from-square"></i>
                             <p>Share</p>
                         </div>
@@ -408,7 +467,7 @@
                                 <i class="fa-regular fa-comment"></i>
                                 <p>Comment</p>
                             </div>
-                            <div class="reacts">
+                            <div class="reacts" onclick="showShared()">
                                 <i class="fa-regular fa-share-from-square"></i>
                                 <p>Share</p>
                             </div>
@@ -461,7 +520,7 @@
                                 <i class="fa-regular fa-comment"></i>
                                 <p>Comment</p>
                             </div>
-                            <div class="reacts">
+                            <div class="reacts" onclick="showShared()">
                                 <i class="fa-regular fa-share-from-square"></i>
                                 <p>Share</p>
                             </div>
@@ -515,7 +574,7 @@
                                 <i class="fa-regular fa-comment"></i>
                                 <p>Comment</p>
                             </div>
-                            <div class="reacts">
+                            <div class="reacts" onclick="showShared()">
                                 <i class="fa-regular fa-share-from-square"></i>
                                 <p>Share</p>
                             </div>
@@ -542,15 +601,31 @@
                     <div class="addfriends-slider">
                         <div class="addfriendscard-container">
                             <div class="addfriends-cards">
+                                    <div class="addfriends-card" id="card-add">
+                                        <div class="addfriends-img">
+                                            <div class="addfriends-x" onclick="hideFriendCard(this)">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <a href="adminotherprofile.html">
+                                            <img src="../AdminAssets/Pictures/17.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="addfriends-content">
+                                            <h2>Sleepy Gehlee</h2>
+                                            <button>Follow</button>
+                                        </div>
+                                    </div>
                                 <div class="addfriends-card" id="card-add">
                                     <div class="addfriends-img">
                                         <div class="addfriends-x" onclick="hideFriendCard(this)">
                                             <i class="fa-solid fa-xmark"></i>
                                         </div>
-                                        <img src="../AdminAssets/Pictures/1.jpg">
+                                        <a href="adminotherprofile.html">
+                                            <img src="../AdminAssets/Pictures/17.jpg">
+                                            </a>
                                     </div>
                                     <div class="addfriends-content">
-                                        <h2>Gehlee Cutie</h2>
+                                        <h2>Sleepy Gehlee</h2>
                                         <button>Follow</button>
                                     </div>
                                 </div>
@@ -559,10 +634,12 @@
                                         <div class="addfriends-x" onclick="hideFriendCard(this)">
                                             <i class="fa-solid fa-xmark"></i>
                                         </div>
-                                        <img src="../AdminAssets/Pictures/3.jpg">
+                                        <a href="adminotherprofile.html">
+                                            <img src="../AdminAssets/Pictures/17.jpg">
+                                            </a>
                                     </div>
                                     <div class="addfriends-content">
-                                        <h2>Cutie Gehlee</h2>
+                                        <h2>Sleepy Gehlee</h2>
                                         <button>Follow</button>
                                     </div>
                                 </div>
@@ -571,10 +648,12 @@
                                         <div class="addfriends-x" onclick="hideFriendCard(this)">
                                             <i class="fa-solid fa-xmark"></i>
                                         </div>
-                                        <img src="../AdminAssets/Pictures/4.jpg">
+                                        <a href="adminotherprofile.html">
+                                            <img src="../AdminAssets/Pictures/17.jpg">
+                                            </a>
                                     </div>
                                     <div class="addfriends-content">
-                                        <h2>Gehlee Odon</h2>
+                                        <h2>Sleepy Gehlee</h2>
                                         <button>Follow</button>
                                     </div>
                                 </div>
@@ -583,10 +662,12 @@
                                         <div class="addfriends-x" onclick="hideFriendCard(this)">
                                             <i class="fa-solid fa-xmark"></i>
                                         </div>
-                                        <img src="../AdminAssets/Pictures/5.jpg">
+                                        <a href="adminotherprofile.html">
+                                            <img src="../AdminAssets/Pictures/17.jpg">
+                                            </a>
                                     </div>
                                     <div class="addfriends-content">
-                                        <h2>Gimena Dangca</h2>
+                                        <h2>Sleepy Gehlee</h2>
                                         <button>Follow</button>
                                     </div>
                                 </div>
@@ -595,10 +676,12 @@
                                         <div class="addfriends-x" onclick="hideFriendCard(this)">
                                             <i class="fa-solid fa-xmark"></i>
                                         </div>
-                                        <img src="../AdminAssets/Pictures/6.jpg">
+                                        <a href="adminotherprofile.html">
+                                            <img src="../AdminAssets/Pictures/17.jpg">
+                                            </a>
                                     </div>
                                     <div class="addfriends-content">
-                                        <h2>Gihlee Gimena</h2>
+                                        <h2>Sleepy Gehlee</h2>
                                         <button>Follow</button>
                                     </div>
                                 </div>
@@ -607,22 +690,12 @@
                                         <div class="addfriends-x" onclick="hideFriendCard(this)">
                                             <i class="fa-solid fa-xmark"></i>
                                         </div>
-                                        <img src="../AdminAssets/Pictures/7.jpg">
+                                        <a href="adminotherprofile.html">
+                                            <img src="../AdminAssets/Pictures/17.jpg">
+                                            </a>
                                     </div>
                                     <div class="addfriends-content">
-                                        <h2>Gehlee Eys</h2>
-                                        <button>Follow</button>
-                                    </div>
-                                </div>
-                                <div class="addfriends-card" id="card-add">
-                                    <div class="addfriends-img">
-                                        <div class="addfriends-x" onclick="hideFriendCard(this)">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </div>
-                                        <img src="../AdminAssets/Pictures/8.jpg">
-                                    </div>
-                                    <div class="addfriends-content">
-                                        <h2>Gehleeeee Jilly</h2>
+                                        <h2>Sleepy Gehlee</h2>
                                         <button>Follow</button>
                                     </div>
                                 </div>
@@ -654,28 +727,28 @@
                             <div class="ol-status"></div>
                             <img src="../AdminAssets/Icons/icon1.png">
                         </div>
-                        <p>Gehlee Cutie</p>
+                        <p>Sleepy Gehlee</p>
                     </div>
                     <div class="friend">
                         <div class="friend-pfp">
                             <div class="of-status"></div>
                             <img src="../AdminAssets/Icons/icon3.png">
                         </div>
-                        <p>Gehlee Odon</p>
+                        <p>Sleepy Gehlee</p>
                     </div>
                     <div class="friend">
                         <div class="friend-pfp">
                             <div class="ol-status"></div>
                             <img src="../AdminAssets/Icons/icon4.png">
                         </div>
-                        <p>Gehlee Lang</p>
+                        <p>Sleepy Gehlee</p>
                     </div>
                     <div class="friend">
                         <div class="friend-pfp">
                             <div class="of-status"></div>
                             <img src="../AdminAssets/Icons/icon5.png">
                         </div>
-                        <p>Gehleeeeee Eys</p>
+                        <p>Sleepy Gehlee</p>
                     </div>
                 </div>
 
@@ -684,39 +757,47 @@
                 <h4>Suggested</h4>
                 
                 <div class="friend-container suggest">
-                    <div class="friend">
-                        <img src="../AdminAssets/Icons/icon6.png">
-                        <div class="names-friends">
-                            <h4>Gehlee Cutie</h4>
-                            <p>Suggested for you<p>
+                    <a href="adminotherprofile.html">
+                        <div class="friend">
+                            <img src="../AdminAssets/Icons/icon8.png">
+                            <div class="names-friends">
+                                <h4>Sleepy Gehlee</h4>
+                                <p>Suggested for you<p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <img src="../AdminAssets/Icons/icon7.png">
-                        <div class="names-friends">
-                            <h4>Gehlee Cutie</h4>
-                            <p>Near you<p>
+                    </a>
+                    <a href="adminotherprofile.html">
+                        <div class="friend">
+                            <img src="../AdminAssets/Icons/icon8.png">
+                            <div class="names-friends">
+                                <h4>Sleepy Gehlee</h4>
+                                <p>Near you<p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <img src="../AdminAssets/Icons/icon8.png">
-                        <div class="names-friends">
-                            <h4>Gehlee Cutie</h4>
-                            <p>Same hobbies<p>
+                    </a>
+                    <a href="adminotherprofile.html">
+                        <div class="friend">
+                            <img src="../AdminAssets/Icons/icon8.png">
+                            <div class="names-friends">
+                                <h4>Sleepy Gehlee</h4>
+                                <p>Same hobbies<p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="friend">
-                        <img src="../AdminAssets/Icons/icon9.png">
-                        <div class="names-friends">
-                            <h4>Gehlee Cutie</h4>
-                            <p>Suggested for you<p>
+                    </a>
+                    <a href="adminotherprofile.html">
+                        <div class="friend">
+                            <img src="../AdminAssets/Icons/icon8.png">
+                            <div class="names-friends">
+                                <h4>Sleepy Gehlee</h4>
+                                <p>Suggested for you<p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 <hr>
 
-                <h4>Request</h4>
+                <h4>Recent Followers</h4>
                 
                 <div class="friend-container suggest">
                     <div class="friend">

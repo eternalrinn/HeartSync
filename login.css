@@ -268,6 +268,35 @@ a{
 .success{
     box-shadow: none;
 }
+.popSentCode, .popNewPass{
+    z-index: 300;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: var(--white);
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    width: 400px;
+    border-radius: var(--bradius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.popSentCode h1, .popNewPass h1{
+    font-size: 1.5rem;
+}
+.popSentCode button, .popNewPass button{
+    border: none;
+    cursor: pointer;
+    border-radius: var(--bradius);
+    font-weight: 500;
+    padding: 8px 14px;
+    color: var(--white);
+    background-color: var(--pink);
+}
 /* -------------------------------HOBBIES CSS--------------------------------------- */
 @media (max-width: 685px){
     .right{

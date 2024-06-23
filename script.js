@@ -319,7 +319,7 @@ const data = {username : "eternalrinn", password: "cel12345" }
 localStorage.setItem('userdata', JSON.stringify(data))
 
 function Login(){
-    var userInput = document.getElementById('userBox').value
+    var userInput = document.getElementById('userBox').value    
     var userPassword = document.getElementById('passBox').value
     var userData = localStorage.getItem('userdata')
     var user_Data = JSON.parse(userData)
@@ -327,7 +327,7 @@ function Login(){
     console.log(userInput + userPassword)
 
     if (user_Data.username === userInput && user_Data.password === userPassword){
-        document.getElementById('login-form').setAttribute('action', 'Admin HTML/admin.html');
+        document.getElementById('login-form').setAttribute('action', 'Admin HTML/adminpanel.html');
     }
     else{
         document.getElementById('login-form').setAttribute('action', 'User HTML/home.html');
@@ -576,6 +576,8 @@ let showChangeEmail = function(){
         showUsername.style.display = 'none';
         showNickname.style.display = 'none';
         showDeact.style.display = 'none';
+        showBday.style.display = 'none';
+        showVerCode.style.display = 'none';
         emailClicked = false;
     }
     else{
@@ -597,6 +599,8 @@ let showChangePass = function(){
         showNickname.style.display = 'none';
         showDeact.style.display = 'none';
         showsendCode.style.display = 'none';
+        showBday.style.display = 'none';
+        showVerCode.style.display = 'none';
         passClicked = false;
     }
     else{
@@ -618,6 +622,7 @@ let showDeactAccount = function(){
         showChangem.style.display = 'none';
         showPassChange.style.display = 'none';
         showsendCode.style.display = 'none';
+        showVerCode.style.display = 'none';
         deactClicked = false;
     }
     else{
@@ -639,6 +644,8 @@ let showeditUsername = function(){
         showChangem.style.display = 'none';
         showPassChange.style.display = 'none';
         showsendCode.style.display = 'none';
+        showBday.style.display = 'none';
+        showVerCode.style.display = 'none';
         cusernameClicked = false;
     }
     else{
@@ -648,7 +655,7 @@ let showeditUsername = function(){
 }
 //CHANGE USERNAME HIDER
 
-//CHANGE USERNAME HIDER
+//CHANGE NICKNAME HIDER
 const showNickname = document.querySelector('#change-nickname');
 let cnicknameClicked = true;
 
@@ -660,6 +667,8 @@ let showeditNickname = function(){
         showChangem.style.display = 'none';
         showPassChange.style.display = 'none';
         showsendCode.style.display = 'none';
+        showBday.style.display = 'none';
+        showVerCode.style.display = 'none';
         cnicknameClicked = false;
     }
     else{
@@ -667,7 +676,7 @@ let showeditNickname = function(){
         cnicknameClicked = true;
     }
 }
-//CHANGE USERNAME HIDER
+//CHANGE NICKNAME HIDER
 
 //CHANGE BDAY HIDER
 const showBday = document.querySelector('#change-bday');
@@ -682,6 +691,7 @@ let showeditBday = function(){
         showChangem.style.display = 'none';
         showPassChange.style.display = 'none';
         showsendCode.style.display = 'none';
+        showVerCode.style.display = 'none';
         cbdayClicked = false;
     }
     else{
@@ -702,6 +712,8 @@ let showSendCode = function(){
         showNickname.style.display = 'none';
         showDeact.style.display = 'none';
         showPassChange.style.display = 'none';
+        showBday.style.display = 'none';
+        showVerCode.style.display = 'none';
         ccodeClicked = false;
     }
     else{
@@ -710,6 +722,27 @@ let showSendCode = function(){
     }
 }
 //CHANGE SENDCODE HIDER
+
+//CHANGE VERIFY CODE HIDER
+const showVerCode = document.querySelector('#verify-code');
+let cverCode = true;
+  
+let showVerifyCode = function(){
+    if (cverCode){
+        showVerCode.style.display = 'flex';
+        showUsername.style.display = 'none';
+        showNickname.style.display = 'none';
+        showDeact.style.display = 'none';
+        showPassChange.style.display = 'none';
+        showBday.style.display = 'none';
+        cverCode = false;
+    }
+    else{
+        showVerCode.style.display = 'none';
+        cverCode = true;
+    }
+}
+//CHANGE VERIFY CODE HIDER
 
 //CHANGE UPDATE HIDER
 const showUpdateLogs = document.querySelector('#popUpdateUI');
@@ -744,6 +777,82 @@ let showswitchACc = function(){
     
 }
 //CHANGE SWITCH HIDER
+
+//CHANGE SENTCODE HIDER
+const showSentCode = document.querySelector('#popSentCode');
+let cSentClicked = true;
+
+let showCodeSent = function(){
+    if (cSentClicked){
+        showSentCode.style.display = 'flex';
+        cSentClicked = false;
+    }
+    else{
+        showSentCode.style.display = 'none';
+        cSentClicked = true;
+    }
+    
+}
+//CHANGE SENTCODE HIDER
+
+//CHANGE SUCCESS PASS HIDER
+const showSuccessPassword = document.querySelector('#popNewPass');
+let cPChangeClicked = true;
+
+let showPassChanged = function(){
+    if (cPChangeClicked){
+        showSuccessPassword.style.display = 'flex';
+        cPChangeClicked = false;
+    }
+    else{
+        showSuccessPassword.style.display = 'none';
+        cPChangeClicked = true;
+    }
+    
+}
+//CHANGE SUCCESS PASS HIDER
+
+
+//CHANGE SHARE PASS HIDER
+const showSharing = document.querySelector('#clickshare');
+let cShareClicked = true;
+
+let showShared = function(){
+    if (cShareClicked){
+        showSharing.style.display = 'flex';
+        cShareClicked = false;
+    }
+    else{
+        showSharing.style.display = 'none';
+        cShareClicked = true;
+    }
+    
+}
+//CHANGE SHARE PASS HIDER
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const submitToRecoverButton = document.getElementById('submitToRecover');
+    const goLoginNowButton = document.getElementById('goLoginNow');
+  
+    if (submitToRecoverButton) {
+      submitToRecoverButton.addEventListener('click', function() {
+        window.location.href = 're-enterpassword.html';
+      });
+    } else {
+      console.error('Element with ID submitToRecover not found.');
+    }
+  
+    if (goLoginNowButton) {
+      goLoginNowButton.addEventListener('click', function() {
+        window.location.href = 'index.html';
+      });
+    } else {
+      console.error('Element with ID goLoginNow not found.');
+    }
+  });
+  
+
 
 //CHOOSE 
 document.addEventListener('DOMContentLoaded', () => {
@@ -796,6 +905,48 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 //EDITPROFILE
 
+
+//DISAPPEAR NAV BAR
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+
+function handleNavbarDisplay() {
+    if (window.innerWidth > 933) {
+        navbar.style.display = 'none';
+    } else {
+        navbar.style.display = 'flex';  // Ensures the navbar is visible initially if below 933px
+        // Scroll event listener will handle further hiding/showing
+    }
+}
+
+window.addEventListener('scroll', function() {
+    if (window.innerWidth <= 933) {
+        let scrollTop = window.scrollY;
+
+        if (scrollTop > 100) {
+            if (scrollTop > lastScrollTop) {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+            }
+        } else {
+            navbar.style.display = 'flex';
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    } else {
+        navbar.style.display = 'none';
+    }
+});
+
+// Initial check when the script runs
+handleNavbarDisplay();
+
+// Add resize event listener to handle window resizing
+window.addEventListener('resize', handleNavbarDisplay);
+//DISAPPEAR NAV BAR
+
+
 // Function to enable dark mode
 function enableDarkMode() {
     updateStylesheet('themes', '../darkmodecss.css');
@@ -841,6 +992,10 @@ function enablePurpMode() {
 // Function to update logo image for Weverse mode
 function updateLogoForWeverse() {
     var logoImage = document.querySelector('.logo img');
+    var logoMobile = document.querySelector('.msearch-logo img')
+    if(logoMobile) {
+        logoMobile.src = '../Assets/logo-weverse.png'
+    }
     if (logoImage) {
         logoImage.src = '../Assets/logo-weverse.png';
     }
@@ -873,6 +1028,10 @@ function updatePlayButtonForWeverse() {
 // Function to update logo image for Default mode
 function updateLogoforDefault() {
     var logoImage = document.querySelector('.logo img');
+    var logoMobile = document.querySelector('.msearch-logo img')
+    if(logoMobile) {
+        logoMobile.src = '../Assets/logo.png'
+    }
     if (logoImage) {
         logoImage.src = '../Assets/logo.png';
     }
@@ -889,6 +1048,10 @@ function updatePlayforPurp() {
 // Function to update logo image for Default mode
 function updateLogoforPurp() {
     var logoImage = document.querySelector('.logo img');
+    var logoMobile = document.querySelector('.msearch-logo img')
+    if(logoMobile) {
+        logoMobile.src = '../Assets/logo-purple.png'
+    }
     if (logoImage) {
         logoImage.src = '../Assets/logo-purple.png';
     }

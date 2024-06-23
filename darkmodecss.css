@@ -103,7 +103,7 @@ body{
     width: 100%;
     height: 100vh;
     gap: 5rem;
-    padding: 10px 30px 10px 10px;
+    padding: 10px 15px 10px 10px;
     background-color: var(--white);
 }
 .sidebar a{
@@ -1487,6 +1487,7 @@ body{
     justify-content: space-between;   
 }
 .video-reactions button{
+    cursor: pointer;
     margin: 20px;
     padding: 6px 12px;
     font-size: 1rem;
@@ -2254,7 +2255,7 @@ body{
 }
 .activities-main{
     display: grid;
-    grid-template-columns: 15% 80%;
+    grid-template-columns: 15% 85%;
 }
 .activities{
     display: flex;
@@ -2537,7 +2538,7 @@ select{
 .userbut p, .passbut p{
     color: var(--medgray);
 }
-.change-email, .change-password, .deact-ac, .change-username, .change-nickname, .change-contact, .change-bday, .change-code{
+.change-email, .change-password, .deact-ac, .change-username, .change-nickname, .change-contact, .change-bday, .change-code, .verify-code{
     position: absolute;
     display: none;
     flex-direction: column;
@@ -2545,10 +2546,14 @@ select{
     background-color: var(--white);
     padding: 20px;
     height: fit-content;
+    width: 300px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.verify-code{
+    z-index: 1100;
 }
 .change-code{
     z-index: 100;
@@ -2763,11 +2768,112 @@ select{
     display: flex;
     gap: 0.5rem;
 }
+.clickshare{
+    z-index: 500;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    border-radius: var(--bradius);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.clickshare img{
+    border-radius: 50%;
+    width: 40px;
+}
+.sharer-img{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.share-head{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.share-input button{
+    cursor: pointer;
+    float: right;
+    border: none;
+    padding: 8px 14px;
+    font-weight: 500;
+    color: var(--persistentwhite);
+    border-radius: var(--bradius);
+    background-color: var(--pink);
+}
+.share-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sharing-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    overflow-x: scroll;
+}
+.sharing-container::-webkit-scrollbar{
+    display: none;
+}
+.share1{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: var(--bradius);
+    align-items: center;
+    padding: 10px;
+}
+.sharer-img h1, .share1 h1{
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--persistentwhite);
+}
+.clicktitles{
+    color: var(--persistentwhite);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.share-input input{
+    color: var(--persistentwhite);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding-bottom: 100px;
+}
+.share-friends{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.share1:hover{
+    cursor: pointer;
+    background-color: var(--lightblue);
+}
+.sharinnbuts{
+    float: right;
+    display: flex;
+    gap: 1rem;
+}
+.mobile-search{
+    display: none;
+}
+.suggest a, .addfriends-cards a{
+    text-decoration: none;
+    color: var(--persistentwhite);
+}
 /* -------------------------------SETTINGS CSS--------------------------------------- */
 
 
 /* TABLET MEDIA QUERY */
-@media (max-width: 1366px) {
+@media (max-width: 1522px) {
     .profile{
         padding: 10px 0 10px 10px;
     }
@@ -2784,7 +2890,14 @@ select{
         justify-content: center;
     }
     .search{
-        display: none;
+        border-radius: 50%;
+        justify-content: center;
+        background-color: transparent;
+    }
+    .search i{
+        background-color: var(--lightblue);
+        padding: 15px;
+        border-radius: 50%;
     }
     .sidebar{
         min-width: 76px;
@@ -2813,6 +2926,12 @@ select{
     }
     .chat-sidebar{
         width: 100%;
+    }
+    .videos{
+        width: 100%;
+    }
+    .videos-main{
+        grid-template-columns: 15% 80%;
     }
 }
 @media (max-width: 1275px) {
@@ -2847,6 +2966,58 @@ select{
 /* MOBILE  MEDIA QUERY */
 
 @media (max-width: 933px){
+    .stories{
+        margin-top: 60px;
+    }
+    .mobile-search{
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--white);
+        padding: 10px;
+        width: 100%;
+        flex: 1;
+        gap: 2rem;
+    }
+    .msearch-logo{
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .msearch-logo img{
+        width: 30px;
+    }
+    .msearch-logo h1{
+        color: var(--black);
+    }
+    .msearch-logo span{
+        color: var(--pink);
+    }
+    .msearch-container input{
+        color: var(--black);
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: transparent;
+    }
+    .msearch-container{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex: 1;
+        padding: 8px 14px;
+        border-radius: var(--bradius);
+        background-color: var(--lightblue);
+    }
+    .mobile-search i{
+        color: var(--persistentwhite);
+    }
+.clickshare{
+    width: 100%;
+}
 .popeditProfile{
     margin: 0;
     width: 100vw;
@@ -2960,11 +3131,12 @@ select{
 }
 .image-post{
     margin: 0 auto 0 auto;
-    height: 400px;
+    height: 600px;
 }
 .image-post-grid{
-    grid-template-rows: repeat(4, 75px);
+    grid-template-rows: repeat(4, fit-content);
 }
+
 
 .profile-container{
     margin: 0;

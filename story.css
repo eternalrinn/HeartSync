@@ -207,6 +207,15 @@
     width: 40px;
     border-radius: 50%;
 }
+.create-boxes button{
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to bottom right,var(--pink), rgb(201, 29, 57));
+    padding: 8px 14px;
+    border-radius: var(--bradius);
+    color: var(--white);
+    width: 300px;
+}
 /* -------------------------------STORIES CSS--------------------------------------- */
 
 @media (max-width:1520px) {

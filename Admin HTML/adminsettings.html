@@ -74,13 +74,7 @@
             </nav>
             
             <div class="menu">
-                <div class="menu-bar" id="menu-bar">
-                    <a href="adminpanel.html">
-                        <div class="menu-option">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                            <p>Admin</p>
-                        </div>
-                    </a>
+                <div class="menu-bar user-menu" id="menu-bar">
                     <a href="adminsettings.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-gear"></i>
@@ -103,14 +97,14 @@
         </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
 
-<div class="navbar">
+<div class="navbar" id="navbar">
     <nav class="bottomnav">
         <div class="navigations bottom-navigations">
                 <a href="admin.html"><i class="fa-solid fa-house"></i></a>
                 <a href="adminstart-match.html"><i class="fa-solid fa-heart"></i></a>
                 <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i></a>
                 <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
-                <a href="adminsettings.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
+                <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
                 <a href="adminprofile.html">
                     <div class="nav-profile">
                         <img src="../AdminAssets/Icons/icon2.png">
@@ -122,6 +116,14 @@
     </nav>
 </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+<div class="verify-code" id="verify-code">
+    <div class="changem-title">
+        <div class="new">
+            <h1>Verified Code</h1>
+            <button onclick="showVerifyCode()">Ok</button>
+        </div>
+    </div>
+</div>
 <div class="change-code" id="change-code">
     <div class="changem-title">
         <div class="new">
@@ -197,7 +199,10 @@
             <h2>Type "Yes" to confirm</h2>
             <input type="text">
         </div>
-        <button onclick="showDeactAccount()">Submit</button>
+        <div class="new">
+            <button onclick="showDeactAccount()">Cancel</button>
+            <button onclick="showDeactAccount()">Confirm</button>
+        </div>
     </div>
 </div>     
 <div class="change-email" id="change-email">
@@ -215,7 +220,10 @@
             <div class="new">
                 <h2>Verification Code</h2>
                 <input type="text">
+                <h2>Password</h2>
+                <input type="password">
                 <button onclick="showSendCode()">Send Code</button>
+                <button onclick="showVerifyCode()">Verify Code</button>
                 <button onclick="showChangeEmail()" >Submit</button>
             </div>
         </div>
@@ -237,6 +245,8 @@
                 <button onclick="showChangePass()" >Submit</button>
             </div>
         </div>
+
+
         <div class="settings">
             <div class="settings-sidebar">
                 <div class="settings-title">

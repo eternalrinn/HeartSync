@@ -18,7 +18,7 @@
                         <img src="../Assets/profile.jpg">
                         <h1>Gehlee Dangca</h1>
                     </div>
-                    <i class="fa-solid fa-circle-check active-switch"></i>
+                    <i class="fa-solid fa-repeat not-switch"></i>
                 </div>
             </a>
             <hr>
@@ -28,7 +28,7 @@
                         <img src="../AdminAssets/Icons/icon2.png">
                         <h1>Gehlee</h1>
                     </div>
-                    <i class="fa-solid fa-repeat not-switch"></i>
+                    <i class="fa-solid fa-circle-check active-switch"></i>
                 </div>
             </a>
             <hr>
@@ -45,14 +45,14 @@
         <div class="navbar" id="navbar">
             <nav class="bottomnav">
                 <div class="navigations bottom-navigations">
-                        <a href="home.html"><i class="fa-solid fa-house"></i></a>
-                        <a href="start-match.html"><i class="fa-solid fa-heart"></i></a>
-                        <a href="videos.html"><i class="fa-solid fa-clapperboard"></i></a>
-                        <a href="messages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>6</h5></div></a>
-                        <a href="notifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
-                        <a href="profile.html" class="active-bnav">
+                        <a href="admin.html"><i class="fa-solid fa-house"></i></a>
+                        <a href="adminstart-match.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i></a>
+                        <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div></a>
+                        <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div></a>
+                        <a href="adminprofile.html">
                             <div class="nav-profile">
-                                <img src="../Assets/profile.jpg">
+                                <img src="../AdminAssets/Icons/icon2.png">
                             </div>
                         </a>
                 </div>
@@ -74,37 +74,39 @@
                     </div>
                 </div>
                 
-                <a href="profile.html">
-                    <div class="profile active-nav">
-                        <img src="../Assets/profile.jpg">
+                <a href="adminprofile.html">
+                    <div class="profile">
+                        <img src="../AdminAssets/Icons/icon2.png">
                         <div class="names">
-                            <h4>Gehlee Dangca</h4>
-                            <p>@Gehl</p>
+                            <h4>Gehlee</h4>
+                            <p>@Goddess</p>
                         </div>
                     </div>
                 </a>
 
                 <div class="navigations">
-                        <a href="home.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
-                        <a href="start-match.html"><i class="fa-solid fa-heart"></i><p>Find Match</p></a>
-                        <a href="videos.html"><i class="fa-solid fa-clapperboard"></i><p>Videos</p></a>
-                        <a href="messages.html"><i class="fa-solid fa-comment-dots"></i></i><div class="alert"><h5>7</h5></div>  <p>Messages</p></a>
-                        <a href="notifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div>  <p>Notifications</p></a>
-                </div>
+                    <a href="adminpanel.html"><i class="fa-solid fa-screwdriver-wrench"></i><p>Admin</p></a>
+                    <a href="admin.html"><i class="fa-solid fa-house"></i><p>Home</p></a>
+                    <a href="adminstart-match.html"><i class="fa-solid fa-heart"></i><p>Find Match</p></a>
+                    <a href="adminvideos.html"><i class="fa-solid fa-clapperboard"></i><p>Videos</p></a>
+                    <a href="adminmessages.html"><i class="fa-solid fa-comment-dots"></i><div class="alert"><h5>7</h5></div>  <p>Messages</p></a>
+                    <a href="adminnotifications.html"><i class="fa-solid fa-bell"></i>  <div class="alert"><h5>24</h5></div>  <p>Notifications</p></a>
+                    
+            </div>
             </nav>
             
             <div class="menu">
                 <div class="menu-bar user-menu" id="menu-bar">
-                    <a href="settings.html">
+                    <a href="adminsettings.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-gear"></i>
                             <p>Settings</p>
                         </div>
                     </a>
-                    <div onclick="showswitchACc()" class="menu-option">
-                        <i class="fa-solid fa-user"></i>
-                        <p>Switch accounts</p>
-                    </div>
+                        <div onclick="showswitchACc()" class="menu-option">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Switch accounts</p>
+                        </div>
                     <a href="../index.html">
                         <div class="menu-option">
                             <i class="fa-solid fa-right-from-bracket"></i>
@@ -155,29 +157,16 @@
             </div>
         </div>
 
-        <div class="popBio" id="popBio">
-            <div class="new">
-                <h1>Edit account bio</h1>
-                <input type="text" placeholder="Type your bio">
-                <button onclick="showBioUser()">Cancel</button>
-                <button onclick="showBioUser()">Confirm</button>
-            </div>
-        </div>
-
         <div class="profile-container">
             <div class="profile-head">
                 <div class="profile-infos">
                     <div class="profile-img">
-                        <img src="../Assets/profile.jpg">
+                        <img src="../AdminAssets/Icons/icon8.png">
                     </div>
                     <div class="profile-names">
                         <div class="names-container">
-                            <h1>Gehlee Dangca</h1>
-                            <p>@Gehl</p>
-                        </div>
-                        <div class="out">
-                            <a onclick="showswitchACc()" href="javascript:void(0)" class="logout"><i class="fa-solid fa-repeat"></i></a>
-                            <a href="../index.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                            <h1>Sleepy Gehlee</h1>
+                            <p>@Jilly</p>
                         </div>
                     </div>
                 </div>
@@ -187,23 +176,15 @@
                             <a href="#"><button class="stats">16 Post</button></a>
                             <a href="#"><button class="stats">2251 Followers</button></a>
                             <a href="#"><button class="stats">9,952 Following</button></a>
+                            <div class="bio-button">
+                                <button>Follow</button>
+                            </div>
                     </div>
                 </div>
             </div>
 
             <div class="bio-container">
-                <div class="bio-button">
-                    <button  onclick="showBioUser()">Edit Bio</button>
-                    <div class="profile-settings">
-                        <button  onclick="showProfileEdit()" class="edit-profile">Edit Profile</button>
-                        <a href="settings.html"><i class="fa-solid fa-gear"></i></a>
-                    </div>
-                </div>
-                <p>👑16 yrs old👑<br>
-                    ✅Genshin Player✅<br>
-                    ✅U&IS Member✅<br>
-                    🔒03-27-24🗝️<br>
-                    🔍XD Sa Etivac lang pala makikita ang da one XD🔍</p>
+                <p>Just a girl</p>
                     <div class="stats-container">
                         <a href="#"><button class="stats">Singing</button></a>
                         <a href="#"><button class="stats">Listening to music</button></a>
@@ -218,16 +199,16 @@
                     </div>
                 </div>
                 <div class="featured">
-                    <img src="../Assets/stories/3.jpg">
+                    <img src="../AdminAssets/Pictures/11.jpg">
                 </div>
                 <div class="featured">
-                    <img src="../Assets/stories/4.jpg">
+                    <img src="../AdminAssets/Pictures/16.jpg">
                 </div>
                 <div class="featured">
-                    <img src="../Assets/stories/5.jpg">
+                    <img src="../AdminAssets/Pictures/13.jpg">
                 </div>
                 <div class="featured">
-                    <img src="../Assets/stories/6.jpg">
+                    <img src="../AdminAssets/Pictures/18.jpg">
                 </div>
             </div>
 
@@ -249,31 +230,31 @@
             <div class="profile-post">
                 <div class="profile-gallery" id="profile-gallery">
                     <div class="gallery">
-                        <img src="../Assets/stories/1.jpg">
+                        <img src="../AdminAssets/Pictures/10.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/2.jpg">
+                        <img src="../AdminAssets/Pictures/11.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/3.jpg">
+                        <img src="../AdminAssets/Pictures/11.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/4.jpg">
+                        <img src="../AdminAssets/Pictures/13.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/5.jpg">
+                        <img src="../AdminAssets/Pictures/14.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/6.jpg">
+                        <img src="../AdminAssets/Pictures/14.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/7.jpg">
+                        <img src="../AdminAssets/Pictures/15.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/8.jpg">
+                        <img src="../AdminAssets/Pictures/16.jpg">
                     </div>
                     <div class="gallery">
-                        <img src="../Assets/stories/9.jpg">
+                        <img src="../AdminAssets/Pictures/17.jpg">
                     </div>
                     <div class="gallery">
                         <img src="../Assets/stories/10.jpg">

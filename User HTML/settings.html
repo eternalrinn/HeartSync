@@ -97,7 +97,7 @@
         </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
 
-<div class="navbar">
+<div class="navbar" id="navbar">
     <nav class="bottomnav">
         <div class="navigations bottom-navigations">
                 <a href="home.html"><i class="fa-solid fa-house"></i></a>
@@ -116,6 +116,14 @@
     </nav>
 </div>
 <!-- ---------------------------MOBILE NAVBAR ------------------------------------>
+<div class="verify-code" id="verify-code">
+    <div class="changem-title">
+        <div class="new">
+            <h1>Verified Code</h1>
+            <button onclick="showVerifyCode()">Ok</button>
+        </div>
+    </div>
+</div>
 <div class="change-code" id="change-code">
     <div class="changem-title">
         <div class="new">
@@ -156,7 +164,7 @@
 <div class="change-username" id="change-username">
     <div class="changem-title">
         <h1>Account Settings</h1>
-        <p>Username must be unique, you can only change your username every 30 days</p>
+        <p>Username must be unique, you can only change username every 30 days</p>
     </div>
     <div class="new">   
         <h2>Enter new username</h2>
@@ -191,46 +199,55 @@
             <h2>Type "Yes" to confirm</h2>
             <input type="text">
         </div>
-        <button onclick="showDeactAccount()">Submit</button>
+        <div class="new">
+            <button onclick="showDeactAccount()">Cancel</button>
+            <button onclick="showDeactAccount()">Confirm</button>
+        </div>
     </div>
-</div>
+</div>     
 <div class="change-email" id="change-email">
-    <div class="changem-title">
-        <h1>Account Settings</h1>
-    </div>
-    <div class="new">
-        <h2>New Email Address</h2>
-        <input type="text">
-    </div>
-    <div class="new">
-        <h2>Confirm Email Address</h2>
-        <input type="text">
-    </div>
-    <div class="new">
-        <h2>Verification Code</h2>
-        <input type="text">
-        <button onclick="showSendCode()">Send Code</button>
-        <button onclick="showChangeEmail()" >Submit</button>
-    </div>
-</div>
-<div class="change-password" id="change-password">
-    <div class="changem-title">
-        <h1>Account Settings</h1>
-    </div>
-    <div class="new">   
-        <h2>Enter old password</h2>
-        <input type="password">
-    </div>
-    <div class="new">
-        <h2>Enter new password</h2>
-        <input type="password">
-    </div>
-    <div class="new">
-        <h2>Confirm new password</h2>
-        <input type="password">
-        <button onclick="showChangePass()">Submit</button>
-    </div>
-</div>  
+            <div class="changem-title">
+                <h1>Account Settings</h1>
+            </div>
+            <div class="new">
+                <h2>New Email Address</h2>
+                <input type="text">
+            </div>
+            <div class="new">
+                <h2>Confirm Email Address</h2>
+                <input type="text">
+            </div>
+            <div class="new">
+                <h2>Verification Code</h2>
+                <input type="text">
+                <h2>Password</h2>
+                <input type="password">
+                <button onclick="showSendCode()">Send Code</button>
+                <button onclick="showVerifyCode()">Verify Code</button>
+                <button onclick="showChangeEmail()" >Submit</button>
+            </div>
+        </div>
+        <div class="change-password" id="change-password">
+            <div class="changem-title">
+                <h1>Account Settings</h1>
+            </div>
+            <div class="new">   
+                <h2>Enter old password</h2>
+                <input type="password">
+            </div>
+            <div class="new">
+                <h2>Enter new password</h2>
+                <input type="password">
+            </div>
+            <div class="new">
+                <h2>Confirm new password</h2>
+                <input type="password">
+                <button onclick="showChangePass()" >Submit</button>
+            </div>
+        </div>
+
+
+        
             <div class="settings">
             <div class="settings-sidebar">
                 <div class="settings-title">
