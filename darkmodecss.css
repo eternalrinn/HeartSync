@@ -942,7 +942,7 @@ body{
 .featured h5, .featured i{
     color: var(--darkgray);
 }
-.featured:nth-child(1){
+.bordered{
     border: 2px dashed var(--medgray);
 }
 .featured{
