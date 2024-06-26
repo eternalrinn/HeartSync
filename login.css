@@ -144,11 +144,8 @@ a{
 /* -------------------------------HOBBIES CSS--------------------------------------- */
 .hobbies-container{
     position: absolute;
-    top: 50%;
-    left: 50%;
     height: fit-content;
-    width: 50vw;
-    transform: translate(-50%, -50%);
+    width: 100vw;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -168,6 +165,7 @@ a{
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
     gap: 1rem;
     flex-grow: 1;
@@ -180,68 +178,47 @@ a{
     font-size: 40px;
 }
 .hob h2{
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--white);
 }
-.pink i{
-    color: #661524;
-}
-.purple i{
-    color: #180c55;
-}
-.green i{
-    color: #07554e;
-}
-.blue i{
-    color: #150a46;
-}
-.hob:nth-child(1){
+.pink{
     background-color: #ff6380;
 }
-.hob:nth-child(2){
+.purple{
     background-color: #9385da;
 }
-.hob:nth-child(3){
+.green{
     background-color: #36da95;
 }
-.hob:nth-child(4){
+.blue{
     background-color: #4daeff;
 }
-.hob:nth-child(5){
-    background-color: #ff6380;
+.palepurp{
+    background-color: #e7dfea;
 }
-.hob:nth-child(6){
-    background-color: #9385da;
+.palepurp h2{
+    color: #88619a;
 }
-.hob:nth-child(7){
-    background-color: #36da95;
+.palepurp p, .palegreen p, .paleblue p, .paleyellow p{
+    color: #1f1f1f;
 }
-.hob:nth-child(8){
-    background-color: #4daeff;
+.palegreen{
+    background-color: #d6ece3;
 }
-.hob:nth-child(9){
-    background-color: #ff6380;
+.palegreen h2{
+    color: #34a474;
 }
-.hob:nth-child(10){
-    background-color: #9385da;
+.paleblue{
+    background-color: #d9eaf0;
 }
-.hob:nth-child(11){
-    background-color: #36da95;
+.paleblue h2{
+    color: #4298b4;
 }
-.hob:nth-child(12){
-    background-color: #4daeff;
+.paleyellow{
+    background-color: #f9eed7;
 }
-.hob:nth-child(13){
-    background-color: #ff6380;
-}
-.hob:nth-child(14){
-    background-color: #9385da;
-}
-.hob:nth-child(15){
-    background-color: #36da95;
-}
-.hob:nth-child(16){
-    background-color: #4daeff;
+.paleyellow h2{
+    color: #e4ae3a;
 }
 .hob:hover{
     transform: scale(1.1);
@@ -266,6 +243,9 @@ a{
     font-weight: 500;
 }
 .success{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     box-shadow: none;
 }
 .popSentCode, .popNewPass{
@@ -296,6 +276,9 @@ a{
     padding: 8px 14px;
     color: var(--white);
     background-color: var(--pink);
+}
+.hob img{
+    width: 200px;
 }
 /* -------------------------------HOBBIES CSS--------------------------------------- */
 @media (max-width: 685px){
@@ -331,17 +314,6 @@ a{
         justify-content: center;
         width: 90vw;
         box-shadow: 0;
-    }
-    .hobbies-container{
-        top: 0;
-        left: 0;
-        transform: translate(0);
-        width: 100vw;
-    }
-    .success{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 }
 

@@ -4,7 +4,7 @@ let Clicked = true;
 
 let showChat = function(){
     if (Clicked){
-        showChatContent.style.display = 'flex';
+        showChatContent.style.display = 'flex'; 
         document.querySelector('.chat').classList.add('chatting');
         Clicked = false;
     }

@@ -19,10 +19,12 @@
     --bradius: 15px;
 }
 /* -------------------------------STORIES CSS--------------------------------------- */
+body{
+    background-color: var(--lightblue);
+}
 .stories-panel{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin: auto;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 95vh;
     margin-top: 20px;
@@ -154,7 +156,10 @@
     position: absolute;
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
     gap: 2rem;
+    padding: 0 20px 0 20px;
     bottom: 2%;
 }
 .story-react{
@@ -167,7 +172,7 @@
     color: var(--white);
 }
 .send-msg input{
-    width: 350px;
+    width: 100%;
     border: none;
     outline: none;
     padding: 10px;
@@ -243,7 +248,7 @@
 
 /* MOBILE  MEDIA QUERY */
 
-@media (max-width: 430px){
+@media (max-width: 645px){
     .stories-panel{
         flex-direction: column;
         gap: 3rem;
@@ -260,9 +265,6 @@
         right: 5%;
         top: 3%;
     }
-    .send-msg input{
-        width: 300px;
-    }
     .back-button{
         color: var(--pink);
         background-color: var(--white);
@@ -272,25 +274,3 @@
 
 
 /* MOBILE  NAVBAR */
-
-/* MOBILE  NAVBAR */
-
-/*IPHONE 12 SCREEN MOBILE */
-@media (max-width:390px) {
-    .send-msg input{
-        width: 260px;
-    }
-}
-/*IPHONE 12 SCREEN MOBILE */
-
-/* SMALLER SCREEN MOBILE [IPHONE SE]  NAVBAR */
-@media (max-width: 375px) {
-    .send-msg{
-        gap: 1rem;
-    }
-    .send-msg input{
-        width: 250px;
-    }
-}
-
-/* SMALLER SCREEN MOBILE [IPHONE SE]  NAVBAR */
