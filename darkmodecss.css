@@ -2033,7 +2033,7 @@ body{
 .popSuspend h1,
 .popBio h1,
 .popeditProfile h1,
-.popUpdateUI{
+.popUpdateUI h1{
     font-weight: 500;
     color: var(--persistentblack);
     font-size: 1rem;

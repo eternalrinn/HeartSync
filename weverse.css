@@ -2519,7 +2519,10 @@ select{
     display: none;
     background-color: var(--white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 30vw;
+    width: fit-content;
+}
+.violation .username{
+    gap: 2rem;
 }
 .violate-but{
     display: flex;
