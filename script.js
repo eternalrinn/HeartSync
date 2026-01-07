@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //LOCAL STORAGE
 
-const data = {username : "eternalrinn", password: "cel12345" }
+const data = {username : "eternalrinn", password: "Daenerys1234" }
 localStorage.setItem('userdata', JSON.stringify(data))
 
 function Login(){
@@ -1113,3 +1113,4 @@ document.getElementById('darkMode').addEventListener('click', enableDarkMode);
 document.getElementById('defaultMode').addEventListener('click', enableDefaultMode);
 document.getElementById('weverseMode').addEventListener('click', enableWeverseMode);
 document.getElementById('purpMode').addEventListener('click', enablePurpMode);
+
