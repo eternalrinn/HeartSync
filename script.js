@@ -16,6 +16,33 @@ let showChat = function(){
 }
 //MESSAGE CONTENT HIDER
 
+// PASSWORD SHOW/HIDE TOGGLE
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordContainers = document.querySelectorAll('.password .input-container');
+    
+    passwordContainers.forEach(container => {
+        const icon = container.querySelector('i');
+        const passwordInput = container.querySelector('input');
+        
+        // Change lock icon to eye icon
+        icon.classList.remove('fa-lock');
+        icon.classList.add('fa-eye');
+        icon.style.cursor = 'pointer';
+        
+        icon.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.classList.remove('fa-eye');
+                this.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                this.classList.remove('fa-eye-slash');
+                this.classList.add('fa-eye');
+            }
+        });
+    });
+});
+
 //GLOBAL CONTENT HIDER
 const showGlobalChat = document.querySelector('#global-content');
 let GContentClicked = true;
@@ -315,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //LOCAL STORAGE
 
-const data = {username : "eternalrinn", password: "Daenerys1234" }
+const data = {username : "1234", password: "1234" }
 localStorage.setItem('userdata', JSON.stringify(data))
 
 function Login(){
